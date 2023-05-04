@@ -9,6 +9,7 @@ def build_element(type='div', class_name='', id='', content=''):
       {content}
     </{type}>
   '''
+  print("!!!")
 print('!!!!!!!!!!!!!!')
 print('Taiki')
   
@@ -19,7 +20,4 @@ print('aryan')
 
 print('Abeer')
 print('Riley')
-
-
-print('!!!!!')
 print ('Eric')
