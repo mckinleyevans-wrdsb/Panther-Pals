@@ -9,13 +9,3 @@ def build_element(type='div', class_name='', id='', content=''):
       {content}
     </{type}>
   '''
-
-print('Declan')
-print("!!!")
-print('!!!!!!!!!!!!!!')
-print('Taiki')
-  
-print('!!!!!')
-print('McKinley Evans')
-print('???')
-print('*****')
