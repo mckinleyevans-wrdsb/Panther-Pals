@@ -16,11 +16,6 @@ print('!!!!!!!!!!!!!!')
 print('Taiki')
   
 print('!!!!!')
-print('Numair')
-
-print('aryan')
-
-print('Abeer')
-print('Riley')
-print('Hi')
-print ('Eric')
+print('McKinley Evans')
+print('???')
+print('*****')
