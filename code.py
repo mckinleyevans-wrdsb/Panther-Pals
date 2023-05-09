@@ -28,7 +28,7 @@ quick_links_list = {
   }
 
 
-# itemize
+
 for i, (link_label, link_url) in enumerate(quick_links_list.items()):
   link_el = build_element(
     type ='a', 
@@ -36,7 +36,8 @@ for i, (link_label, link_url) in enumerate(quick_links_list.items()):
     class_name ='quick-link',
     content = link_label,
     attributes = {
-      'href': link_url
+      'href': link_url,
+      'target=': '"blank"'
     }  
   )
 
