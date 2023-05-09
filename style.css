@@ -28,14 +28,12 @@ h4 {
   
 }
 
-.calendar-row {
-  display: flex;
-  justify-content: space-between;
-  
+.calendar-day {
 }
 
-.calendar-day{
-  border: 2px solid black;
+.calendar-row{
+  display: flex;
+  justify-content: space-between;
   background-color: darkgrey;
   width: 18.5%;
   padding: 2px;
