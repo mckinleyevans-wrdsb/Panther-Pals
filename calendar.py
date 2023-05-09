@@ -55,7 +55,7 @@ def make_row():
 for i in range(rows):
   calendar_content += make_row()
 
-# print each day in the month
+# print each day in the month ( use this later )
 for date in date_iterate(2023, 5):
   pass
 
