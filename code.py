@@ -1,3 +1,5 @@
+from pyscript import Element
+
 def attach_content_to_element(id, content):
   Element(id).element.innerHTML = Element(id).element.innerHTML + content
 
@@ -19,27 +21,3 @@ def build_element(
       {content}
     </{type}>
   '''
-
-quick_links_list = {
-  'Preston Website':'https://phs.wrdsb.ca/',
-  'My Blueprint': 'https://app.myblueprint.ca/?sdid=wrdsb',
-  'School Day':'https://www.school-day.com/',
-  'Kahoot':'https://kahoot.it/'
-  }
-
-
-
-for i, (link_label, link_url) in enumerate(quick_links_list.items()):
-  link_el = build_element(
-    type ='a', 
-    id ='quick-link-'+str(i),
-    class_name ='quick-link',
-    content = link_label,
-    attributes = {
-      'href': link_url,
-      'target=': '"blank"'
-    }  
-  )
-
-  
-  attach_content_to_element('quick-links', link_el)
