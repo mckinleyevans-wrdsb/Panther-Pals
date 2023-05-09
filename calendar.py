@@ -58,10 +58,10 @@ for i in range(rows):
 # print each day in the month
 for date in date_iterate(2023, 5):
   pass
-  
 
-attach_content_to_element('pyscript-calendar', 
-               build_element(
+# make the calendar content on the html
+attach_content_to_element(id='pyscript-calendar', 
+               content=build_element(
                  type='div', 
                  class_name='calendar',
                  id='calendar', 
