@@ -1,3 +1,13 @@
+/* 
+primary color: #800000 (maroon), #8f8f8f (grey), #f5deb3 (wheat), #000000 (black)
+
+secondary color: #ffa600
+
+Fonts: Gill Sans (sans-serif), Optima (sans-serif), Helvetica (sans-serif).
+
+Font size: 12-16pt on a mobile screen, 15-19pt on a tablet, and 16-20pt on a desktop computer screen.(https://www.toptal.com/designers/typography/web-typography-infographic).
+*/
+
 html, body {
   height: 100%;
   width: 100%;
