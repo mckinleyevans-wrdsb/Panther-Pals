@@ -1,3 +1,5 @@
+from pyscript import Element
+
 def attach_content_to_element(id, content):
   Element(id).element.innerHTML = Element(id).element.innerHTML + content
 
