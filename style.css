@@ -1,3 +1,13 @@
+/* 
+primary color: #800000 (maroon), #8f8f8f (grey), #f5deb3 (wheat), #000000 (black)
+
+secondary color: #ffa600
+
+Fonts: Gill Sans (sans-serif), Optima (sans-serif), Helvetica (sans-serif).
+
+Font size: 12-16pt on a mobile screen, 15-19pt on a tablet, and 16-20pt on a desktop computer screen.(https://www.toptal.com/designers/typography/web-typography-infographic).
+*/
+
 html, body {
   height: 100%;
   width: 100%;
@@ -8,4 +18,41 @@ html, body {
   color: black;
   font-size: 40px;
   text-align: center;
+}
+
+h2 {
+  font-family: verdana, sans-serif;
+  color: rgb(66, 245, 123);
+}
+
+h3 {
+  color: black;
+}
+/* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
+*/
+
+h4 {
+  color: white;
+}
+/* used for date number indicator at the top left of the box
+*/
+
+
+.calendar {
+  background-color: gray;
+  display: table;
+  width: 100%;
+  
+}
+
+.calendar-day {
+}
+
+.calendar-row{
+  display: flex;
+  justify-content: space-between;
+  background-color: darkgrey;
+  width: 18.5%;
+  padding: 2px;
+  
 }
