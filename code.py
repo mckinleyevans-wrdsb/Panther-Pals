@@ -1,5 +1,6 @@
-i = 1
+
 def attach_content_to_element(id, content):
+  print(Element(id).element)
   Element(id).element.innerHTML = Element(id).element.innerHTML + content
 
 def build_element(
@@ -21,29 +22,28 @@ def build_element(
     </{type}>
   '''
 
+quick_links_list = {
+  'Preston Website':'https://phs.wrdsb.ca/',
+  'Google': 'https://www.google.com/'
+  }
 
-quick_links_el = build_element(
-  type = 'div',
-  class_name = 'quick-links', 
-  id = 'quick-links'
-)
 
-print(quick_links_el)
-attach_content_to_element(quick_links_el, 'quick-links')
 
 # itemize
-for link in quick_links_list:
+for i, (link_label, link_url) in enumerate(quick_links_list.items()):
+  
   link_el = build_element(
-    type='a', 
-    id='quick-link-'+i,
-    class_name='quick-link',
-    content='display link name',
-    attributes={
-      'href': 'https://phs.wrdsb.ca/'
+    type ='a', 
+    id ='quick-link-'+str(i),
+    class_name ='quick-link',
+    content = link_label,
+    attributes = {
+      'href': link_url
     }  
   )
-  i+=1
-  attach_content_to_element(quick_links, link_el)
+
+  
+  attach_content_to_element('quick-links', link_el)
                           
   #<a href = 'https://phs.wrdsb.ca/', target = 'blank',> Preston Highschool)
 
