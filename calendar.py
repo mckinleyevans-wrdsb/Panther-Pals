@@ -37,14 +37,16 @@ calendar_content = ''''''
 rows = 5
 columns = 5
 
+# return a day and its content
 def make_day():
   day_content = f'''
   <div class='calendar-day'>
     <h4>'#'</h4>
   </div>
   '''
-  return make_day()
+  return day_content
 
+# return a row and loop through/add days per column
 def make_row():
   global columns
   column_content = ''''''
