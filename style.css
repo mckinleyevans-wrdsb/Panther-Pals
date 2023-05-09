@@ -28,7 +28,7 @@ h4 {
   
 }
 
-.calendarTitle {
+.calendar-row {
   display: flex;
   justify-content: space-between;
   
