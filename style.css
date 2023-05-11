@@ -43,6 +43,7 @@ Large Breakpoint: 1200px
 html, body {
   height: 100%;
   width: 100%;
+
 }
 
 h2 {
@@ -81,6 +82,3 @@ h4 {
   padding: 2px;
   
 }
-
-
-
