@@ -6,6 +6,38 @@ secondary color: #ffa600
 Fonts: Gill Sans (sans-serif), Optima (sans-serif), Helvetica (sans-serif).
 
 Font size: 12-16pt on a mobile screen, 15-19pt on a tablet, and 16-20pt on a desktop computer screen.(https://www.toptal.com/designers/typography/web-typography-infographic).
+
+Small Breakpoint: 400px
+Medium Breakpoint: 900px
+Large Breakpoint: 1200px
+
+//class intitlization
+.Avatar{
+  
+}
+//if the screen is between 0px and 400px, than do this
+@media only screen and (min-width:0px) and (max-width:400px){
+  .Avatar{
+    //this example
+    background-color: purple;
+  }
+}
+//if the screen is between 400px and 900px, than do this
+@media only screen and (min-width:400px) and (max-width:900px){
+  .Avatar{
+    //this example
+    background-color: red;
+  }
+}
+//if the screen is larger than 900px, than do this
+@media only screen and (min-width:900px){
+  .Avatar{
+    //this example
+    background-color: blue;
+  }
+}
+
+
 */
 
 html, body {
