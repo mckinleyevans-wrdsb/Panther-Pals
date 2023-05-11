@@ -8,7 +8,7 @@ header_el = build_element(
   content='Panther Pals'
 )
 
-attach_content_to_element("pyscript-header",header_el)
+attach_content_to_element("pyscript-header", header_el)
 
 quick_links_el = build_element(
   type='div',
@@ -16,6 +16,7 @@ quick_links_el = build_element(
 )
 attach_content_to_element('pyscript-header', quick_links_el)
 
+ #list of quick links
 quick_links_list = {
   'Preston Website':'https://phs.wrdsb.ca/',
   'My Blueprint': 'https://app.myblueprint.ca/?sdid=wrdsb',
