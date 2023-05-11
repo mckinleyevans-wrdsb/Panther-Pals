@@ -11,6 +11,7 @@ Font size: 12-16pt on a mobile screen, 15-19pt on a tablet, and 16-20pt on a des
 html, body {
   height: 100%;
   width: 100%;
+
 }
 
 h2 {
@@ -49,6 +50,3 @@ h4 {
   padding: 2px;
   
 }
-
-
-
