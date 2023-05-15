@@ -10,22 +10,22 @@ import uuid
 # - id (used from user) for staff
 class group():
   #constructor
-  def __init__(self, group_name, user_list, group_total, is_active = True, staff_uuid)
+  def __init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4())
     self._group_name = group_nameame
     self._user_list = user_list
     self._group_total = group_total
     self._is_active = is_active
-    self._staff_sponsor_id = staff_uuid.uuid4()
+    self._uuid = staff_uuid
     return self
 
 class classroom:
-  def __init__(self, group_name, user_list, group_total, is_active = True, staff_uuid, department)
+  def __init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4()), department)
   self._department = department
-  group.__init__(self, group_name, user_list, group_total, is_active = True, staff_uuid)
+  group.__init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4()))
   return self
 
 class club:
-  def __init__(self, group_name, user_list, group_total, is_active = True, staff_uuid, club_type)
+  def __init__(self, group_name, user_list, group_total, is_active = True, , club_type)
   self._club_type = club_type
-  group.__init__self, group_name, user_list, group_total, is_active = True, staff_uuid)
+  group.__init__self, group_name, user_list, group_total, is_active = True, )
   return self
