@@ -11,21 +11,21 @@ import uuid
 class Group():
   #constructor
   def __init__(self, group_name, user_list, group_total, is_active = True, uuid):
-    self._group_name = group_nameame
+    self._group_name = group_name
     self._user_list = user_list
     self._group_total = group_total
     self._is_active = is_active
-    self._uuid = staff_uuid
+    self._uuid = uuid.uuid4()
     return self
 
-class Classroom:
-  def __init__(self, group_name, user_list, group_total, is_active = True, uuid, department):
+class Classroom():
+  def __init__(self, group_name, user_list, group_total, is_active = True, department):
     self._department = department
-    group.__init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4())):
+    group.__init__(self, group_name, user_list, group_total, is_active = True):
     return self
 
-class Club:
-  def __init__(self, group_name, user_list, group_total, is_active = True, uuid, club_type):
+class Club():
+  def __init__(self, group_name, user_list, group_total, is_active = True, club_type):
     self._club_type = club_type
     group.__init__self, group_name, user_list, group_total, is_active = True):
     return self
