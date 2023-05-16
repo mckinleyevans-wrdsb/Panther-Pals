@@ -1,6 +1,6 @@
 from datetime import datetime
 
-class Announcement:
+class Announcement():
   def __init__ (self, uuid, title, text):
     self._title = title
     self._text = text
@@ -13,7 +13,7 @@ class Sports_announcement(announcement):
     self._sport = sport
   announcement.__init__(self, id, title, text)
 
-class Guidence_announcement:
+class Guidence_announcement(announcement):
   def __init__(self, id, title, text, audience):
     self._audience = audience
   announcement.__init__(self, id, title, text)
