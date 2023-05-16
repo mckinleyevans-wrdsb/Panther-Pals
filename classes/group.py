@@ -10,7 +10,7 @@ import uuid
 # - id (used from user) for staff
 class Group():
   #constructor
-  def __init__(self, group_name, user_list, group_total, is_active = True, uuid):
+  def __init__(self, group_name, user_list, group_total, is_active = True):
     self._group_name = group_name
     self._user_list = user_list
     self._group_total = group_total
