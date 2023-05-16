@@ -3,4 +3,4 @@
 
 console.log('!!!!!!')
 
-console.log(window.location.href)
+var current_pathname = window.location.pathname;
