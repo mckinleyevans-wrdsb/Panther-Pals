@@ -17,3 +17,4 @@ class Guidence_announcement(announcement):
   def __init__(self, id, title, text, audience):
     self._audience = audience
   announcement.__init__(self, id, title, text)
+  
