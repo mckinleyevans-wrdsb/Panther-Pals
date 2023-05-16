@@ -8,7 +8,7 @@ import uuid
 # - Total numbers of users to be added to group
 # - Is the group active
 # - id (used from user) for staff
-class group():
+class Group():
   #constructor
   def __init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4())
     self._group_name = group_nameame
@@ -18,13 +18,13 @@ class group():
     self._uuid = staff_uuid
     return self
 
-class classroom:
+class Classroom:
   def __init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4()), department)
   self._department = department
   group.__init__(self, group_name, user_list, group_total, is_active = True, uuid.uuid4()))
   return self
 
-class club:
+class Club:
   def __init__(self, group_name, user_list, group_total, is_active = True, , club_type)
   self._club_type = club_type
   group.__init__self, group_name, user_list, group_total, is_active = True, )

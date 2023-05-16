@@ -1,13 +1,9 @@
-class calender:
-  def __init__ (self, id)
-  self._id = id
+class Calender:
+  def __init__ (self, id, calender_posts, text, date):
+    self._id = id
+    self._calender_posts = calender_posts
+    self._text = text
+    self._date = date
   return self
   
-class calender_post:
-  def __init__ (self, id, title, text, date)
-  self._title = title
-  self._text = text
-  self._date = date
-  calender.__init__(id)
-  return self
-  
+
