@@ -1,6 +1,6 @@
 from js import current_pathname
 
-print(current_pathname)
+# print(current_pathname)
 
 
 # Ok so I did a bunch of research and I think what this will come down to is....

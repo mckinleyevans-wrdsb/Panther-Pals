@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="calendar.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 
 </head>
@@ -15,21 +15,21 @@
     <div id='pyscript-header'></div>
     <div id='pyscript-calendar'></div>
   </div>
-  
+
   <py-config>
-      [[fetch]]
-      files = ['/routing.py' ,'./code.py', './header.py', './Calendar/calendar.py', './quickLinks.py' ]
+    [[fetch]]
+    files = ['../routing.py' ,'../code.py', '../header.py', './calendar.py', '../quickLinks.py' ]
   </py-config>
-  <py-script src="./routing.py"></py-script>
-  <py-script src="./code.py"></py-script>
-  <py-script src="./header.py"></py-script>
-  <py-script src="./Calendar/calendar.py"></py-script>
-  
+  <py-script src="../routing.py"></py-script>
+  <py-script src="../code.py"></py-script>
+  <py-script src="../header.py"></py-script>
+  <py-script src="./calendar.py"></py-script>
+
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
-    
-    
-  
+
+
+
 </html>
