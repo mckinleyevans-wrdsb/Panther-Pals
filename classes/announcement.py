@@ -10,13 +10,13 @@ class Announcement():
 class Sports_announcement(announcement):
   def __init__(self, title, text, sport):
     self._sport = sport
+    announcement.__init__(self, title, text)
     return self
-  announcement.__init__(self, title, text)
     
 
 class Guidence_announcement(announcement):
   def __init__(self, title, text, audience):
     self._audience = audience
+    announcement.__init__(self, title, text)
     return self
-  announcement.__init__(self, title, text)
   
