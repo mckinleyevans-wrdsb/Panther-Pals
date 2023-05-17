@@ -1,4 +1,4 @@
-import users
+import Users
 import uuid
 
 #Class Group:
@@ -18,14 +18,14 @@ class Group():
     self._uuid = uuid.uuid4()
     return self
 
-class Classroom():
+class Classroom(Group):
   def __init__(self, group_name, user_list, group_total, is_active = True, department):
     self._department = department
-    group.__init__(self, group_name, user_list, group_total, is_active = True):
+    Group.__init__(self, group_name, user_list, group_total, is_active = True):
     return self
 
-class Club():
+class Club(Group):
   def __init__(self, group_name, user_list, group_total, is_active = True, club_type):
     self._club_type = club_type
-    group.__init__self, group_name, user_list, group_total, is_active = True):
+    Group.__init__(self, group_name, user_list, group_total, is_active = True):
     return self

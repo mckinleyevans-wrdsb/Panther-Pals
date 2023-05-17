@@ -5,15 +5,15 @@ class User:
     self._pronouns = pronouns
     return self
 
-class Teacher(user):
+class Teacher(User):
   def __init__(self, name, pronouns, department):
     self._department = department
-  user.__init__(self, name, pronouns)
+    User.__init__(self, name, pronouns)
     return self
 
-class Student(user):
+class Student(User):
   def __init__(self, name, pronouns, grade, age):
     self._grade = grade
     self._age = age
-  user.__init__(self, name, pronouns)
+    User.__init__(self, name, pronouns)
     return self
