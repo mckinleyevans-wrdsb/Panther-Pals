@@ -9,7 +9,6 @@ class Calendar_post(Calendar):
   def __init__(self, event, text, date):
     self._text = text
     self._date = date
-    Calendar.__init__(self, Calendar_post, event)
     return self
     
   

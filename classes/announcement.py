@@ -14,7 +14,7 @@ class Sports_announcement(announcement):
     return self
     
 
-class Guidence_announcement(announcement):
+class Guidance_announcement(announcement):
   def __init__(self, title, text, audience):
     self._audience = audience
     announcement.__init__(self, title, text)
