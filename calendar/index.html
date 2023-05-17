@@ -13,23 +13,23 @@
 <body>
   <div id='pyscript-code'>
     <div id='pyscript-header'></div>
-    <div id='pyscript-announcements'></div>
     <div id='pyscript-calendar'></div>
   </div>
-
+  
   <py-config>
-    [[fetch]]
-    files = ['/routing.py' ,'./code.py', './header.py', './quickLinks.py' ]
+      [[fetch]]
+      files = ['/routing.py' ,'./code.py', './header.py', './Calendar/calendar.py', './quickLinks.py' ]
   </py-config>
   <py-script src="./routing.py"></py-script>
   <py-script src="./code.py"></py-script>
   <py-script src="./header.py"></py-script>
-
+  <py-script src="./Calendar/calendar.py"></py-script>
+  
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <script src="script.js"></script>
 </body>
-
-
-
+    
+    
+  
 </html>

@@ -64,21 +64,3 @@ h4 {
 */
 
 
-.calendar {
-  background-color: gray;
-  display: table;
-  width: 100%;
-  
-}
-
-.calendar-day {
-}
-
-.calendar-row{
-  display: flex;
-  justify-content: space-between;
-  background-color: darkgrey;
-  width: 18.5%;
-  padding: 2px;
-  
-}
