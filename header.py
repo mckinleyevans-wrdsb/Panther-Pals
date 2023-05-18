@@ -1,5 +1,7 @@
-from code import attach_content_to_element, build_element
-from quickLinks import build_and_attach_quick_links
+#from code import attach_content_to_element, build_element
+#from quickLinks import build_and_attach_quick_links
+import code
+import quickLinks
 
 header_el = build_element(
   type='div',
@@ -23,4 +25,5 @@ quick_links_list = {
   'School Day':'https://www.school-day.com/',
   'Kahoot':'https://kahoot.it/'
 }
-build_and_attach_quick_links(quick_links_list)
+
+quickLinks.build_and_attach_quick_links(quick_links_list)

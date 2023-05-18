@@ -1,5 +1,7 @@
 import datetime
-from ..code import build_element, attach_content_to_element
+#from ..code import test, build_element, attach_content_to_element, testElement
+import code
+
 
 # get the amount of days in a given month
 def get_days_in_month(month, is_leap_year):
