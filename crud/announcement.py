@@ -2,30 +2,38 @@ from classes import announcement
 from js import Blob, document, URL
 from json import dumps, loads
 
-# TODO: 
-# - read & write to list
-# - clean up imports
-# - comment
-
-# Create a new announcement, and save it to our mock data file
-def create(title, text):
-  # Get exising file content
-  file = open('./mock/announcement.json', 'r')
+##################
+# Fetch all existing data from mock file
+##################
+def get_existing_data(filename):
+  file = open(f'./mock/{filename}', 'r')
   file_data = [file.read()]
   all_announcement_data = [loads(idx.replace("'", '"')) for idx in file_data][0]
   file.close()
-  print(all_announcement_data)
+  return all_announcement_data
+
+
+
+##################
+# Create a new announcement
+# Save it to our mock data file
+##################
+def create(title, text):
+  # Get exising file content
+  all_announcement_data = get_existing_data('announcement.json')
 
   # Create a new announcement
-  new_announcement = announcement.Announcement(title, text)
+  new_announcement = announcement.Announcement(
+    title=title,
+    text=text
+  )
   new_announcement_json = dumps(new_announcement.__dict__, default=lambda o: o.__dict__)
   new_announcement_json = loads(new_announcement_json)
   
   # Add new announcement to existing content
   all_announcement_data.append(new_announcement_json)
-  
 
-  # write all content to file
+  # Write all content to file
   file = open('./mock/announcement.json', 'w')
   file.write(str(all_announcement_data))
   file.close()
@@ -33,29 +41,53 @@ def create(title, text):
   # return uuid of new announcement
   return new_announcement._uuid
 
-###### 
-# Ignore this for right now
-######
-def create_and_download():
-  new_announcement = announcement.Announcement('Announcement1 title', 'Announcement1 text')
-  file = open('./mock/announcement.json', 'a')
-  json_data = dumps(new_announcement.__dict__, default=lambda o: o.__dict__).replace('\n')
-  file.write(json_data)
-  file.close()  
 
+
+##################
+# Create a new announcement
+# Download the new version of mock data
+##################
+def create_and_download(title, text):
+  # Get exising file content
+  all_announcement_data = get_existing_data('announcement.json')
+
+  # Create a new announcement
+  new_announcement = announcement.Announcement(
+    title=title,
+    text=text
+  )
+  new_announcement_json = dumps(new_announcement.__dict__, default=lambda o: o.__dict__)
+  new_announcement_json = loads(new_announcement_json)
+  
+  # Add new announcement to existing content
+  all_announcement_data.append(new_announcement_json)
+
+  # Write all content to file
+  file = open('./mock/announcement.json', 'w')
+  file.write(str(all_announcement_data))
+
+  file = open('./mock/announcement.json', 'r')
+  print(file.read())
+  file.close()
+
+  # Download mock data file
   tag = document.createElement('a')
-  tag.href = './mock/announcement.json'
+  blob = Blob.new([all_announcement_data], {type: "application/json"})
+  tag.href = URL.createObjectURL(blob)
   tag.download = 'announcement.json'
   tag.click()
+  
+  
 
 
-# Read one or all announcement data from mock file
+
+##################
+# If uuid is provided, read one announcement from file
+# If no uuid is provided, read all announcements from file
+##################
 def read(uuid = None):
   # Fetch announcement class data
-  file = open('./mock/announcement.json', 'r')
-  file_data = [file.read()]
-  all_announcement_data = [loads(idx.replace("'", '"')) for idx in file_data][0]
-  file.close()
+  all_announcement_data = get_existing_data('announcement.json')
 
   # No uuid provided - return all results
   if uuid == None:

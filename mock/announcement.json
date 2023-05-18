@@ -1,9 +1,1 @@
-[{
-  "_uuid": "9433d0a4-cb9a-450b-8278-a1bfd87fc2a3",
-  "_title": "Announcement1 title",
-  "_text": "Announcement1 text"
-}, {
-  "_uuid": "5916fcfe-1f37-4773-9a77-781395f74091",
-  "_title": "Announcement2 title",
-  "_text": "Announcement2 text"
-}]
+[{'_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3', '_title': 'Announcement1 title', '_text': 'Announcement1 text'}, {'_uuid': '5916fcfe-1f37-4773-9a77-781395f74091', '_title': 'Announcement2 title', '_text': 'Announcement2 text'}, {'_uuid': '0a16d123-5c93-4471-9275-55a9004032bf', '_title': 'some title', '_text': 'some text'}, {'_uuid': '443cf8e8-3804-4a19-9188-db0f80025849', '_title': 'some title', '_text': 'some text'}]
