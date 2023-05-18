@@ -41,6 +41,10 @@ Large Breakpoint: 1200px
 */
 
 html, body {
+  background-image: url("https://freepngimg.com/save/30788-claw-scratches/420x420");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50rem;
   background-color: #e8e8e8;
   height: 100%;
   width: 100%;
