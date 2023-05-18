@@ -51,6 +51,7 @@ html, body {
 .header {
   font-family: verdana, sans-serif;
   font-size: 50px;
+  text-align: center;
   background-color: maroon;
 }
 
