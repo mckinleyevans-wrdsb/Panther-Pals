@@ -18,12 +18,29 @@
 
   <py-config>
     [[fetch]]
-    files = ['../routing.py' ,'../code.py', '../header.py', './calendar.py', '../quickLinks.py' ]
+    files = [
+    '../routing.py'
+    , './calendar.py'
+    , './calendar.css'
+    ]
+
+    [[fetch]]
+    from = '../domControl.py'
+    to_file='domControl.py'
+
+    [[fetch]]
+    from = '../header.py'
+    to_file='header'
+
+    [[fetch]]
+    from = '../quickLinks.py'
+    to_file='quickLinks.py'
+    
   </py-config>
-  <py-script src="../routing.py"></py-script>
-  <py-script src="../code.py"></py-script>
+  <!-- <py-script src="../routing.py"></py-script> -->
+  <!-- <py-script src="../code.py"></py-script> -->
   <py-script src="../header.py"></py-script>
-  <py-script src="../calendar.py"></py-script>
+  <py-script src="./calendar.py"></py-script>
 
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>

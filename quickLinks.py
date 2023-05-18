@@ -1,11 +1,11 @@
 #from code import attach_content_to_element, build_element
-import code 
+import domControl 
 
 #Builds the quicklink element 
 
 def build_and_attach_quick_links(quick_links_list):
   for i, (link_label, link_url) in enumerate(quick_links_list.items()):
-    link_el = code.build_element(
+    link_el = domControl.build_element(
       type ='a', 
       id ='quick-link-'+str(i),
       class_name ='quick-link',
@@ -16,4 +16,4 @@ def build_and_attach_quick_links(quick_links_list):
       }  
     )
   #Add the quicklink content to the quicklink element 
-    code.attach_content_to_element('quick-links', link_el)
+    domControl.attach_content_to_element('quick-links', link_el)
