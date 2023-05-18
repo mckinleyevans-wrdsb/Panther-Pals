@@ -18,7 +18,6 @@ def create(title, text):
 
   # Create a new announcement
   new_announcement = announcement.Announcement(title, text)
-  print(new_announcement._title)
   new_announcement_json = dumps(new_announcement.__dict__, default=lambda o: o.__dict__)
   new_announcement_json = loads(new_announcement_json)
   
@@ -56,6 +55,7 @@ def read(uuid = None):
   file = open('./mock/announcement.json', 'r')
   file_data = [file.read()]
   all_announcement_data = [loads(idx.replace("'", '"')) for idx in file_data][0]
+  file.close()
 
   # No uuid provided - return all results
   if uuid == None:
@@ -72,11 +72,12 @@ def read(uuid = None):
   # uuid provided - search for the intended announcement object
   else:
     for announcement_data in all_announcement_data:
-      announcement_as_class = announcement.Announcement(
-        title = announcement_data['_title'],
-        text = announcement_data['_text']
-      )
-      announcement_as_class._uuid = announcement_data['_uuid']
-      return announcement_as_class
+      if announcement_data['_uuid'] == uuid:
+        announcement_as_class = announcement.Announcement(
+          title = announcement_data['_title'],
+          text = announcement_data['_text']
+        )
+        announcement_as_class._uuid = announcement_data['_uuid']
+        return announcement_as_class
     
   return False
