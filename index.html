@@ -16,24 +16,30 @@
     <div id='pyscript-header'>
     </div>
   </div>
+  
+<!-- @Mya & Brookelyn-
+Our open <div> and closing </div> tags weren't paired up - cleaning them up seems to have done the trick
+Now we need to:
+  1) Position the left_content and right_content side by side, by setting the content div as a flex container
+  2) Give left_content a width setting (in rem)
+  3) Add background colours/images -->
+  
   <!-- Body of page -->
- 
- <div id='content'>
-    <div>
-      <div class='left_content'>
-        <h2> Quick Links</h2>
-        <div class='left_content'></div>
-      <div class='right_content'>
-        <div id='pyscript-announcements'>
-          <h3>Announcements</h3>
+  <div id='content'>
+    <div class='left_content'>
+      <h2> Quick Links</h2>
+    </div>
+    <div class='right_content'>
+      <div id='pyscript-announcements'>
+        <h3>Announcements</h3>
         <div id='pyscript-calendar'>
           <h4>Calendar</h4>
+        </div>
+      </div>
     </div>
   </div>
-  
 
-  
-  
+  <!-- Pyscript staging & loading -->
   <py-config>
       [[fetch]]
       files = ['./code.py', './header.py', './calendar.py', './quickLinks.py']
