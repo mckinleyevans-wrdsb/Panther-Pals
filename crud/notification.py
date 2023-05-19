@@ -18,14 +18,14 @@ def get_existing_data(filename):
 # Create a new notification
 # Save it to our mock data file
 ##################
-def create(title, text):
+def create(title, description, text):
   # Get exising file content
   all_notification_data = get_existing_data('notification.json')
 
   # Create a new notification
   new_notification = notification.Notification(
     title=title,
-    description=description
+    description=description,
     text=text
   )
   new_notification_json = dumps(new_notification.__dict__, default=lambda o: o.__dict__)
@@ -48,14 +48,14 @@ def create(title, text):
 # Create a new notification
 # Download the new version of mock data
 ##################
-def create_and_download(title, text):
+def create_and_download(title, description, text):
   # Get exising file content
   all_notification_data = get_existing_data('notification.json')
 
   # Create a new notification
   new_notification = notification.Notification(
     title=title,
-    description=description
+    description=description,
     text=text
   )
   new_notification_json = dumps(new_notification.__dict__, default=lambda o: o.__dict__)
@@ -69,7 +69,6 @@ def create_and_download(title, text):
   file.write(str(all_notification_data))
 
   file = open('./mock/notification.json', 'r')
-  print(file.read())
   file.close()
 
   # Download mock data file
@@ -94,24 +93,26 @@ def read(uuid = None):
   # No uuid provided - return all results
   if uuid == None:
     notification_list = []
-    for notification_ in all_notification_data:
+    for notification_data in all_notification_data:
       notification_as_class = notification.Notification(
-        title = notification_['_title'],
-        text = notification_['_text']
+        title = notification_data['_title'],
+        description = notification_data['_description'],
+        text = notification_data['_text']
       )
-      notification_as_class._uuid = notification_['_uuid']
+      notification_as_class._uuid = notification_data['_uuid']
       notification_list.append(notification_as_class)
     return notification_list
 
   # uuid provided - search for the intended notification object
   else:
-    for notification_ in all_notification_data:
-      if notification_['_uuid'] == uuid:
+    for notificaton_data in all_notification_data:
+      if notificaton_data['_uuid'] == uuid:
         notification_as_class = notification.Notification(
-          title = notification_['_title'],
-          text = notification_['_text']
+          title = notificaton_data['_title'],
+          description = notificaton_data['_uuid'],
+          text = notificaton_data['_text']
         )
-        notification_as_class._uuid = notification_['_uuid']
+        notification_as_class._uuid = notificaton_data['_uuid']
         return notification_as_class
     
   return False

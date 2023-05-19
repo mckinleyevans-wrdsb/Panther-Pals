@@ -67,7 +67,6 @@ def create_and_download(title, text):
   file.write(str(all_announcement_data))
 
   file = open('./mock/announcement.json', 'r')
-  print(file.read())
   file.close()
 
   # Download mock data file
