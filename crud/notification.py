@@ -77,7 +77,9 @@ def create_and_download(title, description, text):
   tag.href = URL.createObjectURL(blob)
   tag.download = 'notification.json'
   tag.click()
-  
+
+  # return uuid of new notification
+  return new_notification._uuid
   
 
 

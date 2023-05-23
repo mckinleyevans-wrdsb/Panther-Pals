@@ -75,6 +75,8 @@ def create_and_download(title, text):
   tag.href = URL.createObjectURL(blob)
   tag.download = 'announcement.json'
   tag.click()
+
+  return new_announcement._uuid
   
   
 
