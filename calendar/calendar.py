@@ -1,5 +1,5 @@
 import datetime
-from code import build_element, attach_content_to_element
+import domControl
 
 # get the amount of days in a given month
 def get_days_in_month(month, is_leap_year):
@@ -60,8 +60,8 @@ for date in date_iterate(2023, 5):
   pass
 
 # make the calendar content on the html
-attach_content_to_element(id='pyscript-calendar', 
-               content=build_element(
+domControl.attach_content_to_element(id='pyscript-calendar', 
+               content=domControl.build_element(
                  type='div', 
                  class_name='calendar',
                  id='calendar', 

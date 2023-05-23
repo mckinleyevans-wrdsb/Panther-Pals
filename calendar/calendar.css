@@ -1,0 +1,23 @@
+.calendar {
+  background-color: gray;
+  display: table;
+  width: 100%;
+  
+}
+/* used for date number indicator at the top left of the box
+*/
+.calendar-day {
+  color:white;
+  background-color: darkgrey;
+  width: 35px;
+  height: max-content;
+  padding: 4px;
+}
+
+.calendar-row{
+  display: flex;
+  justify-content: space-between;
+  width: 18.5%;
+  padding: 2px;
+  
+}
