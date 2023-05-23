@@ -1,4 +1,4 @@
-from crud import announcement, notification
+from crud import announcement, notification, user
 
 #print(announcement.create('some title','some text'))
 #print(announcement.create_and_download('some title', 'some text'))
@@ -10,3 +10,5 @@ from crud import announcement, notification
 #print(notification.create_and_download('some title', 'some description', 'some text'))
 #print(notification.read('a43f8af0-b8ed-46fc-b771-a66913b6b250'))
 #print(notification.read())
+print("!!!!!!")
+print(user.create_and_download('some name', 'some pronoun'))
