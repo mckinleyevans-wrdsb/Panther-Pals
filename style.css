@@ -50,3 +50,54 @@ h4 {
   padding: 2px;
   
 }
+
+h3-2{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h4-2{
+  font-size: 20px;
+}
+
+.weekly-box{
+  background-color: maroon;
+  width: 585px;
+  height: 918px;
+  border-radius: 8px;
+}
+
+.month-name{
+  /* background-color: #b8b8b8;
+  border: 2px solid black; */
+  color: white;
+  text-align: center;
+}
+
+.h4-2{
+  color: black;
+}
+
+.day-container{
+  background-color: white;
+  margin: auto;
+  width: 529px;
+  height: 159px;
+  border-radius: 8px;
+  margin-top: 11px;
+}
+
+.day-name{
+  /* background-color: #8f8f8f;
+  border: 2px solid red; */
+  margin: 5px;
+  text-align: center;
+}
+
+.boxes{
+  /* background-color: #454545;
+  border: 2px solid orange; */
+  margin: 5px;
+}
+

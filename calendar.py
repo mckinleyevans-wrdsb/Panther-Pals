@@ -29,11 +29,13 @@ columns = 5
 
 # return a day and its content
 def make_day():
-  day_content = f'''
-  <div class='calendar-day'>
-    <h4>#</h4>
-  </div>
-  '''
+  days=25
+  for i in range(days):
+    day_content = f'''
+    <div class='calendar-day'>
+      <h4>#</h4>
+    </div>
+    '''
   return day_content
 
 # return a row and loop through/add days per column
