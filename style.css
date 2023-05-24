@@ -57,8 +57,13 @@ html, body {
   -webkit-text-stroke: 3px black;
   font-weight: bolder;
   text-align: center;
-  background-color: maroon;
-  
+  background-color: #adadad;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/008/473/749/original/the-paw-print-free-png.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 9rem;
+
+
 }
 
 .content{
