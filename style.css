@@ -55,9 +55,25 @@ html, body {
   font-size: 50px;
 
   text-align: center;
-  background-color: #5b5757;
-  bac
 }
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.left_content{
+  width: 25%;
+  max-width: 15rem;
+  min-width: 10%;
+  padding: 0.5rem;
+}
+
+.right_content{
+  flex-grow: 1;
+  padding: 1rem 2rem;
+}
+
 
 h2 {
   font-family: verdana, sans-serif;
