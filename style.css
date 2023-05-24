@@ -94,7 +94,9 @@ h2 {
 h3 {
   color: white;
   font-size: 30px;
-  background-color: grey;
+  background-color: maroon;
+  border-radius: 15px;
+  padding: 0.5rem;
   text-align: center;
 }
 /* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
