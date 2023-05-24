@@ -52,7 +52,10 @@ html, body {
 
 .header {
   font-family: verdana, sans-serif;
+  color: #ffffff;
   font-size: 50px;
+  -webkit-text-stroke: 3px black;
+  font-weight: bolder;
   text-align: center;
   background-color: maroon;
   
