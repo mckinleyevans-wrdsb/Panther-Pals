@@ -70,7 +70,7 @@ if DO_TESTS:
     'class_to_test': 'Notification',
     'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
     'create_params': ['some title', 'some description', 'some text']
-  } {
+  }, {
     'class_to_test': 'User',
     'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
     'create_params': ['some name', 'some pronoun']
