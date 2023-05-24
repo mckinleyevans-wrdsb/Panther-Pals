@@ -10,7 +10,7 @@
 #   ,'./crud/<classname>.py'
 #   ,'./mock/<classname>.json'
 
-# 3) After running the create_and_download() function one time, use the downloaded file to update <classname>.json
+# 3) After running the create_and_download() function one time, use the downloaded file to update <classname>.json.  Use the uuid from this file to update create_params
 
 
 
