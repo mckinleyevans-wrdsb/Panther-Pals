@@ -90,6 +90,10 @@ if DO_TESTS:
     'class_to_test': 'User',
     'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
     'create_params': ['some name', 'some pronoun']
+  }, {
+    'class_to_test': 'Group',
+    'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+    'create_params': ['some group name', 'some user list', 'some group total', True]
   }]
   
   

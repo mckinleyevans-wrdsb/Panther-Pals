@@ -1,5 +1,5 @@
 import Users
-import uuid
+import uuid import uuid4
 
 #Class Group:
 # - Attributes
@@ -15,7 +15,7 @@ class Group():
     self._user_list = user_list
     self._group_total = group_total
     self._is_active = is_active
-    self._uuid = uuid.uuid4()
+    self._uuid = str(uuid4())
     return self
 
 class Classroom(Group):
