@@ -1,5 +1,5 @@
 from uuid import uuid4
-
+#
 class Announcement():
   def __init__ (self, title, text):
     self._uuid = str(uuid4())

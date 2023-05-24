@@ -1,6 +1,6 @@
 import Users
 import uuid import uuid4
-
+#
 #Class Group:
 # - Attributes
 # - name
@@ -9,7 +9,6 @@ import uuid import uuid4
 # - Is the group active
 # - id (used from user) for staff
 class Group():
-  #constructor
   def __init__(self, group_name, user_list, group_total, is_active = True):
     self._group_name = group_name
     self._user_list = user_list

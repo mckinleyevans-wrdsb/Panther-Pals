@@ -15,7 +15,7 @@
 
 
 from uuid import UUID
-from crud import announcement #, notification, user
+from crud import announcement, notification, user
 
 DO_TESTS = True
 
