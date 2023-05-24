@@ -52,6 +52,7 @@ html, body {
 
 .header {
   background-image: url("https://s3-alpha-sig.figma.com/img/7e22/487d/7cdef87bee29426745caeeb1ddfab8e3?Expires=1685923200&Signature=Q1w0ga5r3IsUuiweBNKIWm8z8cT1aWrDTHY8vFpoFjB7iwC7rWSQcUMzsXbAl9Bx24LFQgl57m0LIObC6Ia9Iju1r8bcD3RGeTydohloyD~n5S0p3g6pudI7p-bGnvwiGPpUXynRO3bzaVf0ii58M-dG3zciWNvstRaQd0qLn0VxCxV4za4HubZDBDLQLgoS0K36rfeT4TmxvB~R7G1wKMxywdu1gb3akoGxAKuasxDXP6gaRY8oZhcUbX3GRuQ1PozHXY58F0JwqDJoVxZxhXW2rKO7HOUElklImpFpr-zmXaOYvWcp2iD8f7MOrJuUybmJ0jaukdd3DIFLchblsA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-repeat: no-repeat;
   font-family: verdana, sans-serif;
   font-size: 50px;
   -webkit-text-stroke: 3px black;
