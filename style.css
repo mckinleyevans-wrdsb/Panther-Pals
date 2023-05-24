@@ -83,8 +83,10 @@ html, body {
 h2 {
   font-family: verdana, sans-serif;
   color: rgb(255, 255, 255);
-  text-align: center;
   background-color: grey;
+  padding: 0.5rem;
+  text-align: center;
+ 
 }
 
 
@@ -92,6 +94,8 @@ h2 {
 h3 {
   color: white;
   font-size: 30px;
+  background-color: grey;
+  text-align: center;
 }
 /* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
 */
@@ -100,6 +104,9 @@ h3 {
 h4 {
   color: white;
   font-size: 30px;
+  background-color: grey;
+  padding: 0.5rem;
+  text-align: left;
 }
 /* used for date number indicator at the top left of the box
 */
