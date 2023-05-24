@@ -1,3 +1,19 @@
+# For each new class of mock data:
+
+# 1) Add a record to the `all_tests` list at the bottom of this list
+#   - class_to_test is the class name, capitalized
+#   - known_uuid is the uuid of a record in mock/<classname>.json
+#   - create_params is a list of input params when creating the class instance
+
+# 2) Update index.html to load:
+#   ,'./classes/<classname>.py'
+#   ,'./crud/<classname>.py'
+#   ,'./mock/<classname>.json'
+
+# 3) After running the create_and_download() function one time, use the downloaded file to update <classname>.json
+
+
+
 from uuid import UUID
 from crud import announcement, notification, user
 
