@@ -31,7 +31,7 @@ columns = 5
 def make_day():
   day_content = f'''
   <div class='calendar-day'>
-    <h4>#</h4>
+    <h5>#</h5>
   </div>
   '''
   return day_content
