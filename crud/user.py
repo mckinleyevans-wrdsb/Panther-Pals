@@ -20,7 +20,7 @@ def get_existing_data(filename):
 ##################
 def create(name, pronouns):
   # Get exising file content
-  user = get_existing_data('user.json')
+  all_user_data = get_existing_data('user.json')
 
   # Create a new user
   new_user = user.User(
