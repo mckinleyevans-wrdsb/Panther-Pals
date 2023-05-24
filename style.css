@@ -82,6 +82,7 @@ html, body {
 h2 {
   font-family: verdana, sans-serif;
   color: rgb(255, 255, 255);
+  text-align: center;
   background-color: grey;
 }
 
