@@ -54,10 +54,13 @@ html, body {
   background-image: url("https://s3-alpha-sig.figma.com/img/7e22/487d/7cdef87bee29426745caeeb1ddfab8e3?Expires=1685923200&Signature=Q1w0ga5r3IsUuiweBNKIWm8z8cT1aWrDTHY8vFpoFjB7iwC7rWSQcUMzsXbAl9Bx24LFQgl57m0LIObC6Ia9Iju1r8bcD3RGeTydohloyD~n5S0p3g6pudI7p-bGnvwiGPpUXynRO3bzaVf0ii58M-dG3zciWNvstRaQd0qLn0VxCxV4za4HubZDBDLQLgoS0K36rfeT4TmxvB~R7G1wKMxywdu1gb3akoGxAKuasxDXP6gaRY8oZhcUbX3GRuQ1PozHXY58F0JwqDJoVxZxhXW2rKO7HOUElklImpFpr-zmXaOYvWcp2iD8f7MOrJuUybmJ0jaukdd3DIFLchblsA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   font-family: verdana, sans-serif;
   font-size: 50px;
+  -webkit-text-stroke: 3px black;
+  font-weight: bolder;
   text-align: center;
   background-color: black;
   color: white;
   border: 2px solid maroon;
+  
 }
 
 .content{
@@ -80,21 +83,23 @@ html, body {
 
 h2 {
   font-family: verdana, sans-serif;
-  color: rgb(66, 245, 123);
+  color: rgb(255, 255, 255);
   background-color: grey;
 }
 
 
 
 h3 {
-  color: black;
+  color: white;
+  font-size: 30px;
 }
 /* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
 */
 
 
-.h4 {
-  color: red;
+h4 {
+  color: white;
+  font-size: 30px;
 }
 /* used for date number indicator at the top left of the box
 */
