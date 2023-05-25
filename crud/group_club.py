@@ -101,8 +101,8 @@ def read(uuid = None):
       group_club_as_class = group_club.Group_club(
         group_name = group_club_data['_group_name'],
         user_list = group_club_data['_user_list'],
-        group_total = group_club_data['_group_total']
-        is_active = group_club_data['_is_active']
+        group_total = group_club_data['_group_total'],
+        is_active = group_club_data['_is_active'],
         club_type = group_club_data['_club_type']
       )
       group_club_as_class._uuid = group_club_data['_uuid']
@@ -116,8 +116,8 @@ def read(uuid = None):
         group_club_as_class = group_club.Group_club(
           group_name = group_club_data['_group_name'],
           user_list = group_club_data['_user_list'],
-          group_total = group_club_data['_group_total']
-          is_active = group_club_data['_is_active']
+          group_total = group_club_data['_group_total'],
+          is_active = group_club_data['_is_active'],
           club_type = group_club_data['_club_type']
         )
         group_club_as_class._uuid = group_club_data['_uuid']

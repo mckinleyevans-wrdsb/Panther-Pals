@@ -100,8 +100,8 @@ def read(uuid = None):
       group_classroom_as_class = group_classroom.Group_classroom(
         group_name = group_classroom_data['_group_name'],
         user_list = group_classroom_data['_user_list'],
-        group_total = group_classroom_data['_group_total']
-        is_active = group_classroom_data['_is_active']
+        group_total = group_classroom_data['_group_total'],
+        is_active = group_classroom_data['_is_active'],
         department = group_classroom_data['_department']
       )
       group_classroom_as_class._uuid = group_classroom_data['_uuid']
@@ -115,8 +115,8 @@ def read(uuid = None):
         group_classroom_as_class = group_classroom.Group_classroom(
           group_name = group_classroom_data['_group_name'],
           user_list = group_classroom_data['_user_list'],
-          group_total = group_classroom_data['_group_total']
-          is_active = group_classroom_data['_is_active']
+          group_total = group_classroom_data['_group_total'],
+          is_active = group_classroom_data['_is_active'],
           department = group_classroom_data['_department']
         )
         group_classroom_as_class._uuid = group_classroom_data['_uuid']
