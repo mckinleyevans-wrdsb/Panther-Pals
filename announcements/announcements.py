@@ -14,26 +14,26 @@ def build_announcement():
     </p>
   </div>
   '''
-
-  announcement_box_content = f'''
-  <div>
-    {announcement_content}
-  <div>
-  '''
   
-  domControl.attach_content_to_element('pyscript-announcements', domControl.build_element(
-  type='div',
-  class_name='announcement-box',
-  id='announcement', 
-  content=announcement_box_content,))
+  return announcement_content
   
 
 # amount of announcements currently
 num_of_announcements = 3
 
+announcement_box_content = "<div class = 'announcement-box'>"
+
 # loop and make an announcement for each
 for i in range(num_of_announcements):
-  build_announcement()
+
+  announcement_box_content += build_announcement()
+  
+# build announcement box
+domControl.attach_content_to_element('pyscript-announcements', domControl.build_element(
+  type='div',
+  class_name='announcement-box',
+  id='announcement', 
+  content=announcement_box_content,))
   
 
 #announcement = input('What announcment do you want to make')
