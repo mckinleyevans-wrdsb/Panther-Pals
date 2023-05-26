@@ -1,4 +1,9 @@
+.announcement-box {
+  background-color:maroon;
+  width:100%;
+}
+
 .announcement {
   background-color: grey; 
-  width:100%;
+  width:50%;
 }
