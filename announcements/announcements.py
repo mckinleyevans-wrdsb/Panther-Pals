@@ -35,6 +35,3 @@ domControl.attach_content_to_element('pyscript-announcements', domControl.build_
   id='announcement', 
   content=announcement_box_content,))
   
-
-#announcement = input('What announcment do you want to make')
-
