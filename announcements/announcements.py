@@ -19,7 +19,7 @@ def build_announcement():
   
 
 # amount of announcements currently
-num_of_announcements = 3
+num_of_announcements = 5
 
 announcement_box_content = "<div class = 'announcement-box'>"
 

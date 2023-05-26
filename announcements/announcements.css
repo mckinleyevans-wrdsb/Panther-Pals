@@ -1,9 +1,11 @@
 .announcement-box {
   background-color:maroon;
   width:50%;
-  padding: 2px
+  padding: 0.5%;
 }
 
-.announcement {
+.announcement-box .announcement {
   background-color: white;  
+  width:195%;
+  margin: 1%;
 }
