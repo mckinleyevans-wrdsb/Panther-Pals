@@ -51,6 +51,9 @@ html, body {
 }
 
 .header {
+  background-image: url("https://user-images.githubusercontent.com/132595911/240680507-22454e32-8b3a-4b9f-a514-90559e075d7b.png");
+  background-repeat: no-repeat;
+  background-size: 5rem;
   background-color: grey;
   font-family: verdana, sans-serif;
   font-size: 50px;
