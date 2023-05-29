@@ -18,7 +18,14 @@
     <div id='pyscript-calendar'></div>
   </div>
 
+
   <py-config>
+    [[interpreters]]
+    src = "https://cdn.jsdelivr.net/pyodide/v0.21.2/full/pyodide.js"
+    name = "pyodide-0.22.1"
+    lang = "python"
+    fullStdLib = "true"
+      
     [[fetch]]
     files = [
     './domControl.py'
@@ -26,10 +33,15 @@
     , './quickLinks.py'
     , './calendar/calendar.py' 
     , './calendar/calendar.css' 
+
+    , './db/db.py' 
     ]
+    packages = ['sqlite3']
   </py-config>
+  
   <py-script src="./header.py"></py-script>
   <py-script src="./calendar/calendar.py"></py-script>
+  <py-script src="./db/db.py"></py-script>
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
