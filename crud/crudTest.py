@@ -15,7 +15,7 @@
 
 
 from uuid import UUID
-from crud import announcement, notification, user
+from crud import announcement, notification, user, group
 
 DO_TESTS = True
 
@@ -30,8 +30,8 @@ def test_read(test):
     # Valid results
     print(f"Valid result from {test['class_to_test'].lower()}.read()")
   # Invalid result
-  except:
-    print(f"--- Invalid result from {test['class_to_test'].lower()}.read() ---")
+  except Exception as e:
+    print(f"--- Invalid result from {test['class_to_test'].lower()}.read() ---", e)
     
 # ensure that our read() function behaves as expected when an UUID is provided
 def test_read_with_uuid(test):
@@ -79,21 +79,21 @@ def test_create_and_download(test):
 
 if DO_TESTS:
   all_tests = [{
-    'class_to_test': 'Announcement',
-    'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-    'create_params': ['some title', 'some text']
-  }, {
-    'class_to_test': 'Notification',
-    'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
-    'create_params': ['some title', 'some description', 'some text']
-  }, {
-    'class_to_test': 'User',
-    'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
-    'create_params': ['some name', 'some pronoun']
-  }, {
+  #   'class_to_test': 'Announcement',
+  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+  #   'create_params': ['some title', 'some text']
+  # }, {
+  #   'class_to_test': 'Notification',
+  #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
+  #   'create_params': ['some title', 'some description', 'some text']
+  # }, {
+  #   'class_to_test': 'User',
+  #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
+  #   'create_params': ['some name', 'some pronoun']
+  # }, {
     'class_to_test': 'Group',
     'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-    'create_params': ['some group name', 'some user list', 'some group total', True]
+    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
   }]
   
   

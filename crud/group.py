@@ -78,7 +78,9 @@ def create_and_download(group_name, user_list, group_total, is_active = True):
   tag.href = URL.createObjectURL(blob)
   tag.download = 'group.json'
   tag.click()
-  
+
+  # return uuid of new group
+  return new_group._uuid
   
 
 
@@ -92,13 +94,13 @@ def read(uuid = None):
   all_group_data = get_existing_data('group.json')
 
   # No uuid provided - return all results
-  if uuid == None: group_as_class
+  if uuid == None: 
     group_list = []
     for group_data in all_group_data:
       group_as_class = group.Group(
         group_name = group_data['_group_name'],
         user_list = group_data['_user_list'],
-        group_total = group_data['_group_total']
+        group_total = group_data['_group_total'],
         is_active = group_data['_is_active']
       )
       group_as_class._uuid = group_data['_uuid']
@@ -112,7 +114,7 @@ def read(uuid = None):
         group_as_class = group.Group(
           group_name = group_data['_group_name'],
           user_list = group_data['_user_list'],
-          group_total = group_data['_group_total']
+          group_total = group_data['_group_total'],
           is_active = group_data['_is_active']
         )
         group_as_class._uuid = group_data['_uuid']
