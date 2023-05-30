@@ -1,1 +1,1 @@
-print('__init__')
+pass

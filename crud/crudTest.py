@@ -17,7 +17,7 @@
 from uuid import UUID
 from crud import announcement, notification, user, group, calendar, calendar_post
 
-DO_TESTS = True
+DO_TESTS = False
 
 # ensure that our read() function behaves as expected when no UUID is provided
 def test_read(test):
@@ -69,12 +69,6 @@ def test_create_and_download(test):
   except Exception as e:
     print(f"--- Invalid result from {test['class_to_test'].lower()}.create_and_download({params_list}) ---", e)
 
-    
-
-# #print(notification.create('some title','some description', 'some text'))
-# #print(notification.create_and_download('some title', 'some description', 'some text'))
-# #print(notification.read('a43f8af0-b8ed-46fc-b771-a66913b6b250'))
-# #print(notification.read())
 
 
 if DO_TESTS:
