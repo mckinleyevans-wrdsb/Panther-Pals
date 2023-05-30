@@ -104,7 +104,6 @@ h3 {
 /* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
 */
 
-
 h4 {
   color: white;
   font-size: 30px;
@@ -114,12 +113,10 @@ h4 {
 }
 /* used for date number indicator at the top left of the box
 */
-
 .h5 {
   color: white;
   font-size: 1px;
 }
-
 
 .calendar {
   background-color: gray;

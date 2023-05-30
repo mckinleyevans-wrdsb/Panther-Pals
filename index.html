@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/calendar/calendar.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 
 </head>
@@ -40,19 +41,22 @@ Now we need to:
   </div>
 
   <!-- Pyscript staging & loading -->
+
   <py-config>
-      [[fetch]]
-      files = ['./code.py', './header.py', './calendar.py', './quickLinks.py']
+    [[fetch]]
+    files = [
+    './domControl.py'
+    , './header.py'
+    , './quickLinks.py'
+    , './calendar/calendar.py' 
+    , './calendar/calendar.css' 
+    ]
   </py-config>
-  
-  <py-script src="./code.py"></py-script>
   <py-script src="./header.py"></py-script>
-  <py-script src="./calendar.py"></py-script>
+  <py-script src="./calendar/calendar.py"></py-script>
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  <script src="script.js"></script>
+
 </body>
-    
-    
-  
+
 </html>
