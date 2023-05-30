@@ -59,6 +59,13 @@ html, body {
 }
 
 .header-img1{
+  display: flex;
+  height: 100%;
+  width:10%;
+}
+
+.header-img2{
+  display: flex;
   height: 100%;
   width:10%;
 }
