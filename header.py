@@ -7,7 +7,7 @@ header_el = domControl.build_element(
   type='div',
   class_name='header',
   id='header',
-  content='Panther Pals'
+  content=''
 )
 
 domControl.attach_content_to_element("pyscript-header", header_el)
@@ -25,5 +25,4 @@ quick_links_list = {
   'School Day':'https://www.school-day.com/',
   'Kahoot':'https://kahoot.it/'
 }
-
 quickLinks.build_and_attach_quick_links(quick_links_list)
