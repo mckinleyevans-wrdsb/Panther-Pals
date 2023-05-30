@@ -49,25 +49,23 @@ def create(calendar_post, event):
 ##################
 def create_and_download(calendar_post, event):
   # Get exising file content
+  
   all_calendar_data = get_existing_data('calendar.json')
-  print('1')
   # Create a new calendar
   new_calendar = calendar.Calendar(
     calendar_post = calendar_post,
     event = event
   )
-  print('2')
+  
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
   new_calendar_json = loads(new_calendar_json)
-  print('3')
+  
   # Add new calendar to existing content
   all_calendar_data.append(new_calendar_json)
-  print('4')
+  
   # Write all content to file
   file = open('./mock/calendar.json', 'w')
   file.write(str(all_calendar_data))
-  print('5')
-  file = open('./mock/calendar.json', 'r')
   file.close()
 
   # Download mock data file

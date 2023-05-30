@@ -68,7 +68,6 @@ def create_and_download(event, text, date):
   # Write all content to file
   file = open('./mock/calendar_post.json', 'w')
   file.write(str(all_calendar_post_data))
-  file = open('./mock/calendar_post.json', 'r')
   file.close()
   
   # Download mock data file
