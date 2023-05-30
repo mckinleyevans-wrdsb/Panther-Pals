@@ -91,8 +91,12 @@ if DO_TESTS:
   #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
   #   'create_params': ['some name', 'some pronoun']
   # }, {
-    'class_to_test': 'Group',
-    'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+  #   'class_to_test': 'Group',
+  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+  #   'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
+  # }, {
+    'class_to_test': 'Calendar',
+    'known_uuid': '3a4008a2-41af-4280-bc40-966539ffee90',
     'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
   }]
   
