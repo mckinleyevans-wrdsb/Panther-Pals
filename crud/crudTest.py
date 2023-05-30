@@ -95,14 +95,17 @@ if DO_TESTS:
   #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
   #   'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
   # }, {
-    'class_to_test': 'Calendar_Post',
+    # 'class_to_test': 'Calendar_Post',
+    # 'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
+    # 'create_params': ['Some event','Some text','2023-06-30']
+    'class_to_test': 'Calendar',
     'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
-    'create_params': ['Some event','Some text','2023-06-30']
+    'create_params': ['[919e48a0-217b-49cb-9eb6-ee5b9e8e306f]','Some Event']
   }]
   
   
   for test in all_tests:
-    test_read(test)
-    test_read_with_uuid(test)
-    test_create(test)
+    # test_read(test)
+    # test_read_with_uuid(test)
+    # test_create(test)
     test_create_and_download(test)

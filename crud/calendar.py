@@ -18,14 +18,14 @@ def get_existing_data(filename):
 # Create a new calendar
 # Save it to our mock data file
 ##################
-def create(title, text):
+def create(calendar_post, event):
   # Get exising file content
   all_calendar_data = get_existing_data('calendar.json')
 
   # Create a new calendar
   new_calendar = calendar.Calendar(
-    calendar_post = calendar_post,
-    event = event
+    calendar_post=calendar_post,
+    event=event
   )
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
   new_calendar_json = loads(new_calendar_json)
@@ -47,25 +47,26 @@ def create(title, text):
 # Create a new calendar
 # Download the new version of mock data
 ##################
-def create_and_download(title, text):
+def create_and_download(calendar_post, event):
   # Get exising file content
   all_calendar_data = get_existing_data('calendar.json')
-
+  print('1')
   # Create a new calendar
   new_calendar = calendar.Calendar(
-    calendar_post = caledar_post,
+    calendar_post = calendar_post,
     event = event
   )
+  print('2')
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
   new_calendar_json = loads(new_calendar_json)
-  
+  print('3')
   # Add new calendar to existing content
   all_calendar_data.append(new_calendar_json)
-
+  print('4')
   # Write all content to file
   file = open('./mock/calendar.json', 'w')
   file.write(str(all_calendar_data))
-
+  print('5')
   file = open('./mock/calendar.json', 'r')
   file.close()
 
@@ -75,7 +76,9 @@ def create_and_download(title, text):
   tag.href = URL.createObjectURL(blob)
   tag.download = 'calendar.json'
   tag.click()
-  
+
+  # return uuid of new calendar
+  return new_calendar._uuid
   
 
 
