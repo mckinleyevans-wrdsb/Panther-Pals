@@ -24,8 +24,8 @@ def create(title, text):
 
   # Create a new calendar
   new_calendar = calendar.Calendar(
-    title=title,
-    text=text
+    calendar_post = calendar_post,
+    event = event
   )
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
   new_calendar_json = loads(new_calendar_json)
@@ -53,8 +53,8 @@ def create_and_download(title, text):
 
   # Create a new calendar
   new_calendar = calendar.Calendar(
-    title=title,
-    text=text
+    calendar_post = caledar_post,
+    event = event
   )
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
   new_calendar_json = loads(new_calendar_json)
@@ -93,8 +93,8 @@ def read(uuid = None):
     calendar_list = []
     for calendar_data in all_calendar_data:
       calendar_as_class = calendar.Calendar(
-        title = calendar_data['_title'],
-        text = calendar_data['_text']
+        calendar_post = calendar_data['_calendar_post'],
+        event = calendar_data['_event']
       )
       calendar_as_class._uuid = calendar_data['_uuid']
       calendar_list.append(calendar_as_class)
@@ -105,8 +105,8 @@ def read(uuid = None):
     for calendar_data in all_calendar_data:
       if calendar_data['_uuid'] == uuid:
         calendar_as_class = calendar.Calendar(
-          title = calendar_data['_title'],
-          text = calendar_data['_text']
+          calendar_post = calendar_data['_calendar_post'],
+          event = calendar_data['_event']
         )
         calendar_as_class._uuid = calendar_data['_uuid']
         return calendar_as_class
