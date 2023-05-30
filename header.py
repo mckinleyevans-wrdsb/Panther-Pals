@@ -5,7 +5,7 @@ header_el = build_element(
   type='div',
   class_name='header',
   id='header',
-  content='Panther Pals'
+  content=''
 )
 
 attach_content_to_element("pyscript-header", header_el)
@@ -24,3 +24,4 @@ quick_links_list = {
   'Kahoot':'https://kahoot.it/'
 }
 build_and_attach_quick_links(quick_links_list)
+
