@@ -15,7 +15,7 @@
 
 
 from uuid import UUID
-from crud import announcement, notification, user, group
+from crud import announcement, notification, user, group, calendar, calendar_post
 
 DO_TESTS = True
 
@@ -42,8 +42,8 @@ def test_read_with_uuid(test):
       raise Exception()
     print(f"Valid result from {test['class_to_test'].lower()}.read(\'{test['known_uuid'].lower()}\')")
   # Invalid result
-  except:
-    print(f"--- Invalid result from {test['class_to_test'].lower()}.read(\'{test['known_uuid'].lower()}\') ---")
+  except Exception as e:
+    print(f"--- Invalid result from {test['class_to_test'].lower()}.read(\'{test['known_uuid'].lower()}\') ---", e)
 
 
 # ensure that our create() function behaves as expected
@@ -54,8 +54,8 @@ def test_create(test):
   # create a UUID in order to check validity
     UUID(create_result, version=4)
     print(f"Valid result from {test['class_to_test'].lower()}.create({params_list})")
-  except:
-    print(f"--- Invalid result from {test['class_to_test'].lower()}.create({params_list}) ---")
+  except Exception as e:
+    print(f"--- Invalid result from {test['class_to_test'].lower()}.create({params_list}) ---", e)
 
 
 # ensure that our create_and_download() function behaves as expected
@@ -66,8 +66,8 @@ def test_create_and_download(test):
     # create a UUID in order to check validity
     UUID(create_result, version=4)
     print(f"Valid result from {test['class_to_test'].lower()}.create_and_download({params_list})")
-  except:
-    print(f"--- Invalid result from {test['class_to_test'].lower()}.create_and_download({params_list}) ---")
+  except Exception as e:
+    print(f"--- Invalid result from {test['class_to_test'].lower()}.create_and_download({params_list}) ---", e)
 
     
 
@@ -95,9 +95,9 @@ if DO_TESTS:
   #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
   #   'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
   # }, {
-    'class_to_test': 'Calendar',
-    'known_uuid': '3a4008a2-41af-4280-bc40-966539ffee90',
-    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
+    'class_to_test': 'Calendar_Post',
+    'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
+    'create_params': ['Some event','Some text','2023-06-30']
   }]
   
   
