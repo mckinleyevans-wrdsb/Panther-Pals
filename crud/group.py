@@ -94,7 +94,7 @@ def read(uuid = None):
   all_group_data = get_existing_data('group.json')
 
   # No uuid provided - return all results
-  if uuid == None: 
+  if uuid == None:
     group_list = []
     for group_data in all_group_data:
       group_as_class = group.Group(
