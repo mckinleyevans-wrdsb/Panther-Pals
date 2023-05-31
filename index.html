@@ -19,17 +19,49 @@
   </div>
 
   <py-config>
-    [[fetch]]
-    files = [
+      [[fetch]]
+      files = [
     './domControl.py'
-    , './header.py'
-    , './quickLinks.py'
-    , './calendar/calendar.py' 
-    , './calendar/calendar.css' 
+    ,'./header.py'
+    ,'./quickLinks.py'
+    ,'./calendar/calendar.py' 
+    ,'./calendar/calendar.css' 
+    
+    ,'./crud/crudTest.py'
+    
+    ,'./classes/announcement.py'
+    ,'./crud/announcement.py'
+    ,'./mock/announcement.json'
+    
+    ,'./classes/notification.py'
+    ,'./crud/notification.py'
+    ,'./mock/notification.json'
+
+    ,'./classes/user.py'
+    ,'./crud/user.py'
+    ,'./mock/user.json'
+
+    ,'./classes/calendar.py'
+    ,'./crud/calendar.py'
+    ,'./mock/calendar.json'
+
+    ,'./classes/calendar.py'
+    ,'./crud/calendar.py'
+    ,'./mock/calendar.json'
+
+    ,'./classes/calendar_post.py'
+    ,'./crud/calendar_post.py'
+    ,'./mock/calendar_post.json'
+    
+    ,'./classes/group.py'
+    ,'./crud/group.py'
+    ,'./mock/group.json'
     ]
+
   </py-config>
   <py-script src="./header.py"></py-script>
   <py-script src="./calendar/calendar.py"></py-script>
+  <py-script src="./crud/crudTest.py"></py-script>
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
