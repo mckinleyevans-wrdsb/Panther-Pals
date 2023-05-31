@@ -50,7 +50,6 @@ def create(name, pronouns):
 def create_and_download(name, pronouns):
   # Get exising file content
   all_user_data = get_existing_data('user.json')
-
   # Create a new user
   new_user = user.User(
     name = name,
@@ -61,14 +60,12 @@ def create_and_download(name, pronouns):
   
   # Add new user to existing content
   all_user_data.append(new_user_json)
-
   # Write all content to file
   file = open('./mock/user.json', 'w')
   file.write(str(all_user_data))
 
   file = open('./mock/user.json', 'r')
   file.close()
-
   # Download mock data file
   tag = document.createElement('a')
   blob = Blob.new([all_user_data], {type: "application/json"})
@@ -76,7 +73,7 @@ def create_and_download(name, pronouns):
   tag.download = 'user.json'
   tag.click()
   
-  
+  return new_user._uuid
 
 
 
@@ -87,7 +84,6 @@ def create_and_download(name, pronouns):
 def read(uuid = None):
   # Fetch user class data
   all_user_data = get_existing_data('user.json')
-
   # No uuid provided - return all results
   if uuid == None:
     user_list = []
