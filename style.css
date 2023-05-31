@@ -53,9 +53,6 @@ html, body {
 
 .pyscript-header {
   display: flex;
-  justify-content: space-between;
-  background-size: 5rem;
-  background-color: grey;
 }
 
 .header-img1{
