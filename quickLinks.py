@@ -15,5 +15,6 @@ def build_and_attach_quick_links(quick_links_list):
         'target=': '"blank"'
       }  
     )
+    
   #Add the quicklink content to the quicklink element 
     domControl.attach_content_to_element('quick-links', link_el)
