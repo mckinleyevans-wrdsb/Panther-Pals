@@ -18,7 +18,7 @@ from uuid import UUID
 from crud import announcement, notification, user, group, calendar
 from crud import announcement, notification, user, group, calendar, calendar_post
 
-DO_TESTS = False
+DO_TESTS = True
 
 # ensure that our read() function behaves as expected when no UUID is provided
 def test_read(test):
@@ -74,26 +74,6 @@ def test_create_and_download(test):
 
 if DO_TESTS:
   all_tests = [{
-  #   'class_to_test': 'Announcement',
-  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-  #   'create_params': ['some title', 'some text']
-  # }, {
-  #   'class_to_test': 'Notification',
-  #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
-  #   'create_params': ['some title', 'some description', 'some text']
-  # }, {
-  #   'class_to_test': 'User',
-  #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
-  #   'create_params': ['some name', 'some pronoun']
-  # }, {
-  #   'class_to_test': 'Group',
-  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-  #   'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
-  # }, {
-    'class_to_test': 'Calendar',
-    'known_uuid': '3a4008a2-41af-4280-bc40-966539ffee90',
-    'create_params': [{'_calendar_post': 'calendar posts', '_event': 'name of event'}]
-
     'class_to_test': 'Announcement',
     'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
     'create_params': ['some title', 'some text']
