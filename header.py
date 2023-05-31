@@ -26,5 +26,6 @@ quick_links_list = {
   'School Day':'https://www.school-day.com/',
   'Kahoot':'https://kahoot.it/'
 }
+
 quickLinks.build_and_attach_quick_links(quick_links_list)
 
