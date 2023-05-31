@@ -82,14 +82,14 @@ if DO_TESTS:
     # 'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
     # 'create_params': ['some title', 'some description', 'some text']
   # }, {
-    'class_to_test': 'User',
-    'known_uuid': '328d99c8-c285-4a73-af50-213a413b1bb7',
-    'create_params': ['some name', 'some pronoun']
+    # 'class_to_test': 'User',
+    # 'known_uuid': '328d99c8-c285-4a73-af50-213a413b1bb7',
+    # 'create_params': ['some name', 'some pronoun']
   # }, 
   # {
-  #   'class_to_test': 'Group',
-  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-  #   'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
+    'class_to_test': 'Group',
+    'known_uuid': 'c75ee7a8-9331-45ff-9f64-59de3dc6c88f',
+    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
   # }, {
   #   'class_to_test': 'Calendar_Post',
   #   'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
@@ -102,7 +102,7 @@ if DO_TESTS:
   
   
   for test in all_tests:
-    #test_read(test)
+    test_read(test)
     test_read_with_uuid(test)
-    #test_create(test)
-    #test_create_and_download(test)
+    test_create(test)
+    test_create_and_download(test)

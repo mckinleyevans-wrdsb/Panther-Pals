@@ -20,7 +20,6 @@ def get_existing_data(filename):
 def create(group_name, user_list, group_total, is_active = True):
   # Get exising file content
   all_group_data = get_existing_data('group.json')
-  
   # Create a new group
   new_group = group.Group(
     group_name=group_name,
@@ -33,12 +32,10 @@ def create(group_name, user_list, group_total, is_active = True):
   
   # Add new group to existing content
   all_group_data.append(new_group_json)
-
   # Write all content to file
   file = open('./mock/group.json', 'w')
   file.write(str(all_group_data))
   file.close()
-  
   # return uuid of new group
   return new_group._uuid
 
