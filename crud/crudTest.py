@@ -15,8 +15,8 @@
 
 
 from uuid import UUID
-from crud import announcement, notification, user, group, calendar
-from crud import announcement, notification, user, group, calendar, calendar_post
+from crud import announcement, notification, user, group, calendar, group, group_club
+from crud import announcement, notification, user, group, calendar, calendar_post, group_club
 
 DO_TESTS = True
 
@@ -87,10 +87,14 @@ if DO_TESTS:
     # 'create_params': ['some name', 'some pronoun']
   # }, 
   # {
-    'class_to_test': 'Group',
-    'known_uuid': 'c75ee7a8-9331-45ff-9f64-59de3dc6c88f',
-    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
+    # 'class_to_test': 'Group',
+    # 'known_uuid': 'c75ee7a8-9331-45ff-9f64-59de3dc6c88f',
+    # 'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
   # }, {
+    'class_to_test': 'Group_Club',
+    'known_uuid': 'b56bf922-458e-4047-97f4-b2136026dca0',
+    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True', 'Some Club Type']
+    # }, {
   #   'class_to_test': 'Calendar_Post',
   #   'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
   #   'create_params': ['Some event','Some text','2023-06-30']
