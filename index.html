@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/calendar/calendar.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 
 </head>
@@ -16,14 +17,15 @@
     <div id='pyscript-announcements'></div>
     <div id='pyscript-calendar'></div>
   </div>
-  
+
   <py-config>
       [[fetch]]
       files = [
-    './code.py'
+    './domControl.py'
     ,'./header.py'
-    ,'./calendar.py'
     ,'./quickLinks.py'
+    ,'./calendar/calendar.py' 
+    ,'./calendar/calendar.css' 
     
     ,'./crud/crudTest.py'
     
@@ -42,22 +44,29 @@
     ,'./classes/calendar.py'
     ,'./crud/calendar.py'
     ,'./mock/calendar.json'
+
+    ,'./classes/calendar.py'
+    ,'./crud/calendar.py'
+    ,'./mock/calendar.json'
+
+    ,'./classes/calendar_post.py'
+    ,'./crud/calendar_post.py'
+    ,'./mock/calendar_post.json'
+    
     ,'./classes/group.py'
     ,'./crud/group.py'
     ,'./mock/group.json'
     ]
-    
+
   </py-config>
-  
-  <py-script src="./code.py"></py-script>
   <py-script src="./header.py"></py-script>
-  <py-script src="./calendar.py"></py-script>
+  <py-script src="./calendar/calendar.py"></py-script>
   <py-script src="./crud/crudTest.py"></py-script>
 
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  <script src="script.js"></script>
+
 </body>
-    
-    
-  
+
+
+
 </html>

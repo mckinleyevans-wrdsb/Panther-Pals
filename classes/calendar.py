@@ -13,5 +13,9 @@ class Calendar_post(Calendar):
     self._date = date
     return self
     
+  def __init__ (self, calendar_post, event):
+    self._uuid = str(uuid4())
+    self._calendar_post = calendar_post
+    self._event = event
   
 
