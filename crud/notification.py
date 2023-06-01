@@ -78,8 +78,8 @@ def create_and_download(title, description, text):
   tag.download = 'notification.json'
   tag.click()
 
-  # return uuid of new notification
   return new_notification._uuid
+  
   
 
 
@@ -107,14 +107,14 @@ def read(uuid = None):
 
   # uuid provided - search for the intended notification object
   else:
-    for notificaton_data in all_notification_data:
-      if notificaton_data['_uuid'] == uuid:
+    for notification_data in all_notification_data:
+      if notification_data['_uuid'] == uuid:
         notification_as_class = notification.Notification(
-          title = notificaton_data['_title'],
-          description = notificaton_data['_uuid'],
-          text = notificaton_data['_text']
+          title = notification_data['_title'],
+          description = notification_data['_description'],
+          text = notification_data['_text']
         )
-        notification_as_class._uuid = notificaton_data['_uuid']
+        notification_as_class._uuid = notification_data['_uuid']
         return notification_as_class
     
   return False
