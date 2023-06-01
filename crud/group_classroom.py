@@ -80,6 +80,8 @@ def create_and_download(group_name, user_list, group_total, is_active = True, de
   tag.href = URL.createObjectURL(blob)
   tag.download = 'group_classroom.json'
   tag.click()
+
+  return new_group_classroom._uuid
   
   
 
