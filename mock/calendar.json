@@ -1,3 +1,1 @@
-[{'_uuid': '3a4008a2-41af-4280-bc40-966539ffee90','_calendar_post': 'calendar posts', '_event': 'name of event'}]
-
-[{'_uuid': '5db4eade-ddaa-4e0c-ad55-0d85c2f53068', '_calendar_post': '[919e48a0-217b-49cb-9eb6-ee5b9e8e306f]', '_event': 'Some Event'}]
+[{'_uuid': '5db4eade-ddaa-4e0c-ad55-0d85c2f53068', '_calendar_posts': '["919e48a0-217b-49cb-9eb6-ee5b9e8e306f", "919e48a0-217b-49cb-9eb6-ee5b9e8e306g"]', '_event': 'Some Event'}, {'_uuid': '94c5d69c-8246-47e4-90eb-3f6442457805', '_calendar_posts': '["919e48a0-217b-49cb-9eb6-ee5b9e8e306f"]', '_event': 'a different Event'}, {'_uuid': 'f889d881-4a6a-46ed-870d-07e739b078cd', '_calendar_posts': '["919e48a0-217b-49cb-9eb6-ee5b9e8e306f", "919e48a0-217b-49cb-9eb6-ee5b9e8e306g"]', '_event': 'Some Event'}]

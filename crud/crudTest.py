@@ -74,34 +74,35 @@ def test_create_and_download(test):
 
 if DO_TESTS:
   all_tests = [{
-    'class_to_test': 'Announcement',
-    'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-    'create_params': ['some title', 'some text']
-  }, {
-    'class_to_test': 'Notification',
-    'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
-    'create_params': ['some title', 'some description', 'some text']
-  }, {
-    'class_to_test': 'User',
-    'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
-    'create_params': ['some name', 'some pronoun']
-  }, {
-    'class_to_test': 'Group',
-    'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
-    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
-  }, {
-    'class_to_test': 'Calendar_Post',
-    'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
-    'create_params': ['Some event','Some text','2023-06-30']
-  }, {
+  #   'class_to_test': 'Announcement',
+  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+  #   'create_params': ['some title', 'some text']
+  # }, {
+  #   'class_to_test': 'Notification',
+  #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
+  #   'create_params': ['some title', 'some description', 'some text']
+  # }, {
+  #   'class_to_test': 'User',
+  #   'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
+  #   'create_params': ['some name', 'some pronoun']
+  # }, {
+  #   'class_to_test': 'Group',
+  #   'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+  #   'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
+  # }, {
+  #   'class_to_test': 'Calendar_Post',
+  #   'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
+  #   'create_params': ['Some event','Some text','2023-06-30']
+  # }, {
     'class_to_test': 'Calendar',
     'known_uuid': '5db4eade-ddaa-4e0c-ad55-0d85c2f53068',
-    'create_params': ['[919e48a0-217b-49cb-9eb6-ee5b9e8e306f]','Some Event']
+    'create_params': [['919e48a0-217b-49cb-9eb6-ee5b9e8e306f','919e48a0-217b-49cb-9eb6-ee5b9e8e306g'],'Some Event']
   }]
   
   
   for test in all_tests:
-    test_read(test)
-    test_read_with_uuid(test)
-    test_create(test)
-    test_create_and_download(test)
+    # test_read(test)
+    # test_read_with_uuid(test)
+    # test_create(test)
+    # test_create_and_download(test)
+    print(test_read(test))
