@@ -17,7 +17,7 @@ quick_links_el = domControl.build_element(
   id='quick-links'
 )
 
-domControl.attach_content_to_element('pyscript-header', quick_links_el)
+domControl.attach_content_to_element('quick-links', quick_links_el)
 
  #list of quick links
 quick_links_list = {
