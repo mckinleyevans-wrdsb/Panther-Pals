@@ -4,7 +4,7 @@ import uuid
 #Class Group:
 # - Attributes
 # - name
-# - list of users
+# - list of users 
 # - Total numbers of users to be added to group
 # - Is the group active
 # - id (used from user) for staff

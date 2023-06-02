@@ -1,7 +1,7 @@
 import domControl
 
 # builds an announcement and adds it to the html
-def build_announcement():
+def build_announcement(): 
 
   announcement_content = '''
   <div class = 'announcement'>

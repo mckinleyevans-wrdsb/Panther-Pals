@@ -2,7 +2,7 @@ class Announcement():
   def __init__ (self, title, text):
     self._uuid = uuid.uuid4()
     self._title = title
-    self._text = text
+    self._text = text 
     return self
 
 class Sports_announcement(Announcement):
