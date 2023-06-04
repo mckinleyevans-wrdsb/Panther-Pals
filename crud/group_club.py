@@ -1,4 +1,4 @@
-from classes import group
+from classes import group_club
 from js import Blob, document, URL
 from json import dumps, loads
 
@@ -18,12 +18,12 @@ def get_existing_data(filename):
 # Create a new group
 # Save it to our mock data file
 ##################
-def create(group_name, user_list, group_total, is_active = True, club_type):
+def create(group_name, user_list, group_total, is_active = True, club_type = None):
   # Get exising file content
   all_group_club_data = get_existing_data('group_club.json')
   
   # Create a new group
-  new_group_club = group_club.Group_club(
+  new_group_club = group_club.Group_Club(
     group_name=group_name,
     user_list=user_list,
     group_total=group_total,
@@ -50,12 +50,12 @@ def create(group_name, user_list, group_total, is_active = True, club_type):
 # Create a new group
 # Download the new version of mock data
 ##################
-def create_and_download(group_name, user_list, group_total, is_active = True, club_type):
+def create_and_download(group_name, user_list, group_total, is_active = True, club_type = None):
   # Get exising file content
   all_group_club_data = get_existing_data('group_club.json')
   
   # Create a new group
-  new_group = group.Group(
+  new_group_club = group_club.Group_Club(
     group_name=group_name,
     user_list=user_list,
     group_total=group_total,
@@ -82,7 +82,7 @@ def create_and_download(group_name, user_list, group_total, is_active = True, cl
   tag.download = 'group_club.json'
   tag.click()
   
-  
+  return new_group_club._uuid
 
 
 
@@ -95,10 +95,10 @@ def read(uuid = None):
   all_group_club_data = get_existing_data('group_club.json')
 
   # No uuid provided - return all results
-  if uuid == None: group_club_as_class
+  if uuid == None:
     group_club_list = []
     for group_club_data in all_group_club_data:
-      group_club_as_class = group_club.Group_club(
+      group_club_as_class = group_club.Group_Club(
         group_name = group_club_data['_group_name'],
         user_list = group_club_data['_user_list'],
         group_total = group_club_data['_group_total'],
@@ -113,7 +113,7 @@ def read(uuid = None):
   else:
     for group_club_data in all_group_club_data:
       if group_club_data['_uuid'] == uuid:
-        group_club_as_class = group_club.Group_club(
+        group_club_as_class = group_club.Group_Club(
           group_name = group_club_data['_group_name'],
           user_list = group_club_data['_user_list'],
           group_total = group_club_data['_group_total'],
