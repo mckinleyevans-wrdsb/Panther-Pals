@@ -24,6 +24,20 @@
     ]
 
     [[fetch]]
+    from = '../crud/announcement.py'
+    to_file='crud_announcement.py'
+
+    [[fetch]]
+    from = '../mock/announcement.json'
+    to_file='announcement.json'
+    
+    [[fetch]]
+    from = '../classes/announcement.py'
+    to_file='classes/announcement.py'
+
+    
+    
+    [[fetch]]
     from = '../domControl.py'
     to_file='domControl.py'
 
@@ -36,7 +50,9 @@
     to_file='quickLinks.py'
   </py-config>
   <py-script src="../header.py"></py-script>
-  
+
+   <py-script src="../crud/crudTest.py"></py-script>
+ 
   <py-script src="./announcements.py"></py-script>
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 

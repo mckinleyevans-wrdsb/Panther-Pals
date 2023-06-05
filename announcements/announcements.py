@@ -1,5 +1,5 @@
 import domControl
-
+import crud_announcement
 # builds an announcement and adds it to the html
 def build_announcement():
 
