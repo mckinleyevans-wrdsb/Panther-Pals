@@ -54,7 +54,7 @@ html, body {
 .pyscript-header {
   display: flex;
   width: 100%;
-  
+  padding: 1rem, 2rem;
 }
 
 .header-img1{
@@ -84,10 +84,11 @@ html, body {
 }
 
 .left_content{
-  width: 25%;
-  height: 
   max-width: 15rem;
-  min-width: 10%;
+  min-width: 10rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: gray;
 
 }
 
