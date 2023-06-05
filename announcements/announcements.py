@@ -18,6 +18,12 @@ def build_announcement():
   return announcement_content
   
 
+
+crud_announcement.get_existing_data('announcement.json')
+
+
+
+
 # amount of announcements currently
 num_of_announcements = 5
 
