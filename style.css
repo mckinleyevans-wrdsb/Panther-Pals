@@ -53,6 +53,8 @@ html, body {
 
 .pyscript-header {
   display: flex;
+  width: 100%;
+  
 }
 
 .header-img1{
