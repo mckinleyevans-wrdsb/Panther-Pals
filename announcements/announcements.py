@@ -30,7 +30,10 @@ announcement_box_content = "<div class = 'announcement-box'>"
 # loop and make an announcement for each
 for i in range(num_of_announcements):
   announcement_box_content += build_announcement(announcement_list, i)
-  
+
+
+announcement_box_content += '</div>'
+
 # build announcement box
 domControl.attach_content_to_element('pyscript-announcements', domControl.build_element(
   type='div',
