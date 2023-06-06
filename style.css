@@ -83,9 +83,9 @@ html, body {
 
 .left_content{
   width: 25%;
-  height: 
   max-width: 15rem;
   min-width: 10%;
+  padding-top: 2rem
 
 }
 
@@ -148,4 +148,15 @@ h4 {
   width: 18.5%;
   padding: 2px;
   
+}
+
+
+#quick-links {
+  background-color: darkgrey;
+  display:flex;
+  flex-direction: column
+}
+
+#quick-links h2 {
+  margin-top: 0;
 }

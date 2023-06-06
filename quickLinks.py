@@ -2,7 +2,6 @@
 import domControl 
 
 #Builds the quicklink element 
-
 def build_and_attach_quick_links(quick_links_list):
   for i, (link_label, link_url) in enumerate(quick_links_list.items()):
     link_el = domControl.build_element(
@@ -18,3 +17,12 @@ def build_and_attach_quick_links(quick_links_list):
   #Add the quicklink content to the quicklink element 
     domControl.attach_content_to_element('quick-links', link_el)
 
+#list of quick links
+quick_links_list = {
+  'Preston Website':'https://phs.wrdsb.ca/',
+  'My Blueprint': 'https://app.myblueprint.ca/?sdid=wrdsb',
+  'School Day':'https://www.school-day.com/',
+  'Kahoot':'https://kahoot.it/'
+}
+
+build_and_attach_quick_links(quick_links_list)

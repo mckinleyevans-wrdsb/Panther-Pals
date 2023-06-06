@@ -19,13 +19,5 @@ quick_links_el = domControl.build_element(
 
 domControl.attach_content_to_element('quick-links', quick_links_el)
 
- #list of quick links
-quick_links_list = {
-  'Preston Website':'https://phs.wrdsb.ca/',
-  'My Blueprint': 'https://app.myblueprint.ca/?sdid=wrdsb',
-  'School Day':'https://www.school-day.com/',
-  'Kahoot':'https://kahoot.it/'
-}
-
-quickLinks.build_and_attach_quick_links(quick_links_list)
+ 
 
