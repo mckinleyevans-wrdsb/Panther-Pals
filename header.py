@@ -5,12 +5,9 @@ import quickLinks
 
 header_el = domControl.build_element(
   type='div',
-  class_name='header',
-  id='header',
-  content=''
+  id='pyscript-header',
 )
 
-domControl.attach_content_to_element("pyscript-header", header_el)
 
 quick_links_el = domControl.build_element(
   type='div',
