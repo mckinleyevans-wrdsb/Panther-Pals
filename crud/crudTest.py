@@ -108,8 +108,7 @@ if DO_TESTS:
   
   
   for test in all_tests:
-    # test_read(test)
-    # test_read_with_uuid(test)
-    # test_create(test)
+    test_read(test)
+    test_read_with_uuid(test)
+    test_create(test)
     # test_create_and_download(test)
-    print(test_read(test))

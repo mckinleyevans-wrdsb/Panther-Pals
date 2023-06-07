@@ -89,13 +89,11 @@ def create_and_download(calendar_posts, event):
 def read(uuid = None):
   # Fetch calendar class data
   all_calendar_data = get_existing_data('calendar.json')
-  
   # No uuid provided - return all results
   if uuid == None:
     calendar_list = []
     for calendar_data in all_calendar_data:
       calendar_posts_as_list = calendar_data['_calendar_posts'].replace('[','').replace(']','').replace('"','').replace('\'','').split()
-
       calendar_as_class = calendar.Calendar(
         calendar_posts = calendar_posts_as_list,
         event = calendar_data['_event']
