@@ -1,6 +1,6 @@
 from uuid import uuid4
 from classes.user import User
-
+  
 class Teacher(User):
   def __init__(self, name, pronouns, department):
     self._name = name

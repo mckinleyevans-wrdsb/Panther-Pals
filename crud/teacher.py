@@ -1,4 +1,4 @@
-from classes import teacher
+import classes.teacher
 from js import Blob, document, URL
 from json import dumps, loads
 
@@ -23,7 +23,7 @@ def create(name, pronouns, department):
   all_teacher_data = get_existing_data('teacher.json')
 
   # Create a new teacher
-  new_teacher = teacher.Teacher(
+  new_teacher = classes.teacher.Teacher(
     name = name,
     pronouns = pronouns,
     department = department
@@ -52,7 +52,7 @@ def create_and_download(name, pronouns, department):
   # Get exising file content
   all_teacher_data = get_existing_data('teacher.json')
   # Create a new teacher
-  new_teacher = teacher.Teacher(
+  new_teacher = classes.teacher.Teacher(
     name = name,
     pronouns = pronouns,
     department = department
@@ -91,7 +91,7 @@ def read(uuid = None):
   if uuid == None:
     teacher_list = []
     for teacher_data in all_teacher_data:
-      teacher_as_class = teacher.Teacher(
+      teacher_as_class = classes.teacher.Teacher(
         name = teacher_data['_name'],
         pronouns = teacher_data['_pronouns'],
         department = teacher_data['_department']
@@ -104,7 +104,7 @@ def read(uuid = None):
   else:
     for teacher_data in all_teacher_data:
       if teacher_data['_uuid'] == uuid:
-        teacher_as_class = teacher.Teacher(
+        teacher_as_class = classes.teacher.Teacher(
           name = teacher_data['_name'],
           pronouns = teacher_data['_pronouns'],
           department = teacher_data['_department']
