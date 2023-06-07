@@ -15,7 +15,7 @@
 
 
 from uuid import UUID
-from crud import announcement, notification, user, group, group_club, group_classroom, calendar_post, calendar
+from crud import announcement, notification, user, group, group_club, group_classroom, calendar_post, calendar, student
 
 DO_TESTS = True
 
@@ -104,6 +104,10 @@ if DO_TESTS:
     'class_to_test': 'Calendar',
     'known_uuid': '5db4eade-ddaa-4e0c-ad55-0d85c2f53068',
     'create_params': [['919e48a0-217b-49cb-9eb6-ee5b9e8e306f','919e48a0-217b-49cb-9eb6-ee5b9e8e306g'],'Some Event']
+  }, {
+    'class_to_test': 'Student',
+    'known_uuid': 'ed3cdd81-4f34-460e-9609-efbc175735e6',
+    'create_params': ['some name', 'some pronoun', 'some grade', 'some age']
   }]
   
   
