@@ -88,7 +88,6 @@ def make_row():
                    content=calendar_content
                  )
                 )
-monthly_calendar()
 
 def weekly_calendar():
   all_day_containers = ''
@@ -136,5 +135,8 @@ def weekly_calendar():
     id = 'pyscript-weekly-calendar', 
     content = weekly_calendar
   )
-  
+
+
+monthly_calendar()
+
 weekly_calendar()

@@ -10,6 +10,12 @@
   width: 40%;
 }
 
+/* Contains the bas dimension of the weekly calendar */
+#pyscript-weekly-calendar{
+  width: 25%;
+  min-width: 300px;
+}
+
 .calendar {
   background-color: gray;
   display: table; 
@@ -33,11 +39,6 @@
   padding: 2px;
 }
 
-/* Contains the bas dimension of the weekly calendar */
-#pyscript-weekly-calendar{
-  width: 25%;
-  min-width: 300px;
-}
 
 /* Contains the entirety of the week calendar */
 .weekly-calendar{
