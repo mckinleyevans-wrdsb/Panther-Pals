@@ -12,10 +12,38 @@
 </head>
 
 <body>
-  <div id='pyscript-code'>
-    <div id='pyscript-header'></div>
-    <div id='pyscript-announcements'></div>
+
+  <!-- Header -->
+  <div id='pyscript-header' style="display:flex;justify-content: space-between; padding: 1rem;background-color: gray; max-height: 10rem; min-height: 5rem;">
+   <!-- img 1 -->
+    <img src="https://user-images.githubusercontent.com/132692209/242350768-03af5659-bd4f-46ad-bd35-1f922e5dea55.png" class='header-img1'>
+    <!-- title -->
+    <div class='header-text'>
+      <h1> Panther Pals</h1>
+    </div>
+    <!-- img 2 -->
+    <img src="https://user-images.githubusercontent.com/132692209/242350768-03af5659-bd4f-46ad-bd35-1f922e5dea55.png" alt= "Panther Pals Logo"  class='header-img2'>
+
   </div>
+  
+  <!-- Body of page -->
+  <div class='content'>
+    <div class='left_content'>
+      <div id='quick-links'>
+        <h2> Quick Links</h2>
+      </div>
+    </div>
+    <div class='right_content'>
+      <div id='pyscript-announcements'>
+        <h3>Announcements</h3>
+        <div id='pyscript-calendar'>
+          <h4>Calendar</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pyscript staging & loading -->
 
   <py-config>
       [[fetch]]
@@ -76,7 +104,5 @@
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
 </body>
-
-
 
 </html>

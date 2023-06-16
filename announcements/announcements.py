@@ -1,8 +1,11 @@
 import domControl
 from crud import announcement
 # builds an announcement and adds it to the html
+
+
 def build_announcement(title,text):
   announcement_content = f'''
+
   <div class = 'announcement'>
     <h4>
       {title}

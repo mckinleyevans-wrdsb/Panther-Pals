@@ -41,21 +41,133 @@ Large Breakpoint: 1200px
 */
 
 html, body {
+  background-image: url("https://freepngimg.com/save/30788-claw-scratches/420x420");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 50rem;
+  background-color: #e8e8e8;
   height: 100%;
   width: 100%;
-
 }
+
+.pyscript-header {
+  display: flex;
+  width: 100%;
+  padding: 1rem, 2rem;
+}
+
+.header-img1{
+  display: flex;
+  height: 10rem;
+}
+
+.header-img2{
+  display: flex;
+  height:10rem;
+}
+
+.header-text {
+  display: flex;
+  font-family: verdana, sans-serif;
+  font-size: 30px;
+  -webkit-text-stroke: 3px black;
+  color: white;
+  font-weight: bolder;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.left_content{
+  max-width: 15rem;
+  min-width: 10rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: gray;
+}
+
+.right_content{
+  flex-grow: 1;
+  padding: 1rem 2rem;
+}
+
 
 h2 {
   font-family: verdana, sans-serif;
-  color: rgb(66, 245, 123);
+  color: rgb(255, 255, 255);
+  background-color: grey;
+  padding: 0.5rem;
+  text-align: center;
+ 
 }
 
+
+
 h3 {
-  color: black;
+  color: white;
+  font-size: 30px;
+  background-color: maroon;
+  border-radius: 15px;
+  padding: 0.5rem;
+  text-align: center;
 }
+
 /* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
 */
 
+h4 {
+  color: white;
+  font-size: 30px;
+  background-color: grey;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 15px;
+
+  
+}
+/* used for date number indicator at the top left of the box
+*/
+.h5 {
+  color: white;
+  font-size: 1px;
+}
+
+.calendar {
+  background-color: gray;
+  display: table;
+  width: 100%;
+  
+}
 
 
+
+.calendar-row{
+  display: flex;
+  justify-content: space-between;
+  background-color: darkgrey;
+  width: 18.5%;
+  padding: 2px;
+}
+
+
+#quick-links {
+  display:flex;
+  flex-direction: column
+}
+
+#quick-links h2 {
+  margin-top: 0;
+}
+
+#quick-links .quick-link {
+  background-color: maroon;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.2rem;
+  font-weight: bolder;
+  color: white;
+  border-radius: 10px;
+}
