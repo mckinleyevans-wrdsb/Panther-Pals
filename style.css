@@ -40,6 +40,8 @@ Large Breakpoint: 1200px
 
 */
 
+/* background image and presets */
+
 html, body {
   background-image: url("https://freepngimg.com/save/30788-claw-scratches/420x420");
   background-repeat: no-repeat;
@@ -50,6 +52,7 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
 
 .pyscript-header {
   display: flex;
@@ -76,6 +79,8 @@ html, body {
   font-weight: bolder;
 }
 
+/* all content under header */
+
 .content{
   display: flex;
   flex-direction: row;
@@ -94,6 +99,7 @@ html, body {
   padding: 1rem 2rem;
 }
 
+/* quick links title  */
 
 h2 {
   font-family: verdana, sans-serif;
@@ -104,7 +110,7 @@ h2 {
  
 }
 
-
+/* announcements title */
 
 h3 {
   color: white;
@@ -115,8 +121,7 @@ h3 {
   text-align: center;
 }
 
-/* used for Day column. Ex, Monday, Tuesday, Wednesday, Thursday, Friday at the top of the calendar
-*/
+/* calender title  */
 
 h4 {
   color: white;
@@ -128,8 +133,9 @@ h4 {
 
   
 }
-/* used for date number indicator at the top left of the box
-*/
+
+/* quick-links links */
+
 .h5 {
   color: white;
   font-size: 1px;
