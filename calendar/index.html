@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="calendar.css" rel="stylesheet" type="text/css" />
+  <link href="../style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 
 </head>
 
 <body>
-  <div id='pyscript-code'>
-    <div id='pyscript-header'></div>
-    <div id='pyscript-calendar'>
-      <div id='pyscript-weekly-calendar'></div>
-      <div id='monthly-calendar'></div>
-    </div>
-    
+
+  <!-- Header -->
+<div id='pyscript-header' style="display:flex;justify-content: space-between;">
+  <!-- <div class=header-img1> -->
+  <img src="https://user-images.githubusercontent.com/132595911/240680507-22454e32-8b3a-4b9f-a514-90559e075d7b.png"
+    alt="Panther Pals Logo" class='header-img1'>
+  <!-- </div> -->
+  <div class='header-text'>
+    <h1> Panther Pals</h1>
+
   </div>
+  <!-- <div class=header-img2> -->
+  <img src="https://user-images.githubusercontent.com/132595911/240680507-22454e32-8b3a-4b9f-a514-90559e075d7b.png"
+    alt="Panther Pals Logo" class='header-img2'>
+</div>
+</div>
 
-  <py-config>
-    [[fetch]]
-    files = [
-    './calendar.py'
-    , './calendar.css'
-    ]
+<div id='pyscript-code'>
+  <div id='pyscript-header'></div>
+  <div id='pyscript-calendar'></div>
+</div>
 
-    [[fetch]]
-    from = '../domControl.py'
-    to_file='domControl.py'
+<py-config>
+  [[fetch]]
+  files = [
+  './calendar.py'
+  , './calendar.css'
+  ]
 
-    [[fetch]]
-    from = '../header.py'
-    to_file='header'
+  [[fetch]]
+  from = '../style.css'
+  to_file='style.css'
 
-    [[fetch]]
-    from = '../quickLinks.py'
-    to_file='quickLinks.py'
-    
-  </py-config>
-  <py-script src="../header.py"></py-script>
-  <py-script src="./calendar.py"></py-script>
+  [[fetch]]
+  from = '../domControl.py'
+  to_file='domControl.py'
 
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  
+  [[fetch]]
+  from = '../header.py'
+  to_file='header'
+
+  [[fetch]]
+  from = '../quickLinks.py'
+  to_file='quickLinks.py'
+
+</py-config>
+<py-script src="../header.py"></py-script>
+<py-script src="./calendar.py"></py-script>
+
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
 </body>
 
 
