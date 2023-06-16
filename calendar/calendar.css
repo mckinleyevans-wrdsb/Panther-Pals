@@ -1,3 +1,21 @@
+/* The container that hold the entirety of the calendar */
+#pyscript-calendar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Contains the base dimension of the monthly calendar */
+#monthly-calendar{
+  width: 40%;
+}
+
+/* Contains the bas dimension of the weekly calendar */
+#pyscript-weekly-calendar{
+  width: 25%;
+  min-width: 300px;
+}
+
 .calendar {
   background-color: gray;
   display: table;
@@ -19,5 +37,67 @@
   justify-content: space-between;
   width: 18.5%;
   padding: 2px;
-  
+}
+
+
+/* Contains the entirety of the week calendar */
+.weekly-calendar{
+  background-color: maroon;
+  border-radius: 0.5rem;
+  padding-bottom: 0.35rem;
+}
+
+/* Contains the name of the month; currently just says September as a place holder */
+.month-name{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: black;
+  margin-bottom: -1rem;
+}
+
+/* Holds the name of the day and the info for that day */
+.day-container{
+  background-color: white;
+  margin: 1rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+/* Contains the name of the day */
+.day-name{
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Contains the info for that day of the week; currently just says info */
+.box-info{
+  margin: .5rem;
+}
+
+/* Phone */
+@media only screen and (min-width:0px) and (max-width:400px){
+  #pyscript-calendar{
+    flex-direction: column;
+    justify-content: center;
+  }
+  #pyscript-weekly-calendar{
+    width: 75%;
+  }
+  #monthly-calendar{
+    width: 75%;
+    min-width:300px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width:400px) and (max-width:900px){
+}
+
+/* Chromebook */
+@media only screen and (min-width:900px){
 }
