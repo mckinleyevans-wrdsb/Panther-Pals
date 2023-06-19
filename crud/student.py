@@ -20,10 +20,10 @@ def get_existing_data(filename):
 ##################
 def create(name, pronouns, grade, age):
   # Get exising file content
-  student = get_existing_data('student.json')
+  all_student_data = get_existing_data('student.json')
 
   # Create a new student
-  new_student = user.Student(
+  new_student = student.Student(
     name = name,
     pronouns = pronouns,
     grade = grade,
@@ -54,7 +54,7 @@ def create_and_download(name, pronouns, grade, age):
   all_student_data = get_existing_data('student.json')
 
   # Create a new student
-  new_student = user.Student(
+  new_student = student.Student(
     name = name,
     pronouns = pronouns, 
     grade = grade, 
@@ -80,7 +80,7 @@ def create_and_download(name, pronouns, grade, age):
   tag.download = 'student.json'
   tag.click()
   
-  
+  return new_student._uuid
 
 
 
@@ -96,7 +96,7 @@ def read(uuid = None):
   if uuid == None:
     student_list = []
     for student_data in all_student_data:
-      student_as_class = user.Student(
+      student_as_class = student.Student(
         name = student_data['_name'],
         pronouns = student_data['_pronouns'], 
         grade = student_data['_grade'],
@@ -110,7 +110,7 @@ def read(uuid = None):
   else:
     for student_data in all_student_data:
       if student_data['_uuid'] == uuid:
-        student_as_class = user.Student(
+        student_as_class = student.Student(
           name = student_data['_name'],
           pronouns = student_data['_pronouns'], 
           grade = student_data['_grade'],

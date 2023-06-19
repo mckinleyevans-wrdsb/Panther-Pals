@@ -15,13 +15,3 @@ class Group():
     self._group_total = group_total
     self._is_active = is_active
     self._uuid = str(uuid4())
-
-class Classroom(Group):
-  def __init__(self, group_name, user_list, group_total, is_active = 'True', department='None'):
-    self._department = department
-    Group.__init__(self, group_name, user_list, group_total, is_active = 'True')
-
-class Club(Group):
-  def __init__(self, group_name, user_list, group_total, is_active = 'True', club_type='None'):
-    self._club_type = club_type
-    Group.__init__(self, group_name, user_list, group_total, is_active = 'True')

@@ -1,1 +1,4 @@
-[{"_uuid": "919e48a0-217b-49cb-9eb6-ee5b9e8e306f", "_event": "Some event", "_text": "Some text", "_date": "2023-06-30"}]
+[
+  {"_uuid": "919e48a0-217b-49cb-9eb6-ee5b9e8e306f", "_event": "Some event", "_text": "Some text", "_date": "2023-06-30"},
+  {"_uuid": "919e48a0-217b-49cb-9eb6-ee5b9e8e306g", "_event": "Anothter event", "_text": "Another text", "_date": "2023-06-29"}
+]

@@ -15,7 +15,7 @@
 
 
 from uuid import UUID
-from crud import announcement, notification, user, group, calendar, calendar_post
+from crud import announcement, notification, user, group, calendar, calendar_post, group_club, group_classroom, teacher, student
 
 DO_TESTS = False
 
@@ -70,7 +70,7 @@ def test_create_and_download(test):
     print(f"--- Invalid result from {test['class_to_test'].lower()}.create_and_download({params_list}) ---", e)
 
 
-
+#Test code for each class 
 if DO_TESTS:
   all_tests = [{
     'class_to_test': 'Announcement',
@@ -82,12 +82,20 @@ if DO_TESTS:
     'create_params': ['some title', 'some description', 'some text']
   }, {
     'class_to_test': 'User',
-    'known_uuid': 'a43f8af0-b8ed-46fc-b771-a66913b6b250',
+    'known_uuid': '328d99c8-c285-4a73-af50-213a413b1bb7',
     'create_params': ['some name', 'some pronoun']
   }, {
     'class_to_test': 'Group',
-    'known_uuid': '9433d0a4-cb9a-450b-8278-a1bfd87fc2a3',
+    'known_uuid': 'c75ee7a8-9331-45ff-9f64-59de3dc6c88f',
     'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True']
+  }, {
+    'class_to_test': 'Group_Club',
+    'known_uuid': 'b56bf922-458e-4047-97f4-b2136026dca0',
+    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True', 'Some Club Type']
+  }, {
+    'class_to_test': 'Group_Classroom',
+    'known_uuid': '4afcf0b2-3e69-4ef7-9972-65371ed2b516',
+    'create_params': ['Group Name', 'List of users', 'Number of people in group', 'True', 'Some Department']
   }, {
     'class_to_test': 'Calendar_Post',
     'known_uuid': '919e48a0-217b-49cb-9eb6-ee5b9e8e306f',
@@ -96,6 +104,14 @@ if DO_TESTS:
     'class_to_test': 'Calendar',
     'known_uuid': '5db4eade-ddaa-4e0c-ad55-0d85c2f53068',
     'create_params': ['[919e48a0-217b-49cb-9eb6-ee5b9e8e306f]','Some Event']
+  }, {
+    'class_to_test': 'Teacher',
+    'known_uuid': 'f46c59ae-a7fa-4803-b5d2-8e13a41aa917',
+    'create_params': ['some name', 'some pronoun', 'some department']
+  }, {
+    'class_to_test': 'Student',
+    'known_uuid': 'ed3cdd81-4f34-460e-9609-efbc175735e6',
+    'create_params': ['some name', 'some pronoun', 'some grade', 'some age']
   }]
   
   

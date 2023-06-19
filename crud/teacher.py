@@ -1,4 +1,4 @@
-from classes import user
+import classes.teacher
 from js import Blob, document, URL
 from json import dumps, loads
 
@@ -20,10 +20,10 @@ def get_existing_data(filename):
 ##################
 def create(name, pronouns, department):
   # Get exising file content
-  teacher = get_existing_data('teacher.json')
+  all_teacher_data = get_existing_data('teacher.json')
 
   # Create a new teacher
-  new_teacher = user.Teacher(
+  new_teacher = classes.teacher.Teacher(
     name = name,
     pronouns = pronouns,
     department = department
@@ -51,19 +51,16 @@ def create(name, pronouns, department):
 def create_and_download(name, pronouns, department):
   # Get exising file content
   all_teacher_data = get_existing_data('teacher.json')
-
   # Create a new teacher
-  new_teacher = user.Teacher(
+  new_teacher = classes.teacher.Teacher(
     name = name,
     pronouns = pronouns,
     department = department
   )
   new_teacher_json = dumps(new_teacher.__dict__, default=lambda o: o.__dict__)
   new_teacher_json = loads(new_teacher_json)
-  
   # Add new teacher to existing content
   all_teacher_data.append(new_teacher_json)
-
   # Write all content to file
   file = open('./mock/teacher.json', 'w')
   file.write(str(all_teacher_data))
@@ -77,10 +74,10 @@ def create_and_download(name, pronouns, department):
   tag.href = URL.createObjectURL(blob)
   tag.download = 'teacher.json'
   tag.click()
-  
-  
 
-
+  # return uuid of new teacher
+  return new_teacher._uuid
+  
 
 ##################
 # If uuid is provided, read one teacher from file
@@ -94,7 +91,7 @@ def read(uuid = None):
   if uuid == None:
     teacher_list = []
     for teacher_data in all_teacher_data:
-      teacher_as_class = user.Teacher(
+      teacher_as_class = classes.teacher.Teacher(
         name = teacher_data['_name'],
         pronouns = teacher_data['_pronouns'],
         department = teacher_data['_department']
@@ -107,10 +104,11 @@ def read(uuid = None):
   else:
     for teacher_data in all_teacher_data:
       if teacher_data['_uuid'] == uuid:
-        teacher_as_class = user.Teacher(
+        teacher_as_class = classes.teacher.Teacher(
           name = teacher_data['_name'],
           pronouns = teacher_data['_pronouns'],
           department = teacher_data['_department']
+
         )
         teacher_as_class._uuid = teacher_data['_uuid']
         return teacher_as_class

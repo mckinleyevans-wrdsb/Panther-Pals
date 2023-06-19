@@ -1,23 +1,17 @@
 from classes import calendar_post
 from js import Blob, document, URL
 from json import dumps, loads
-###
-##################
+
+#####################
 # Fetch all existing data from mock file
 ##################
 def get_existing_data(filename):
   file = open(f'./mock/{filename}', 'r')
   file_data = [file.read()]
-  all_calendar_data = [loads(idx.replace("'", '"')) for idx in file_data][0]
+  all_calendar_post_data = [loads(idx.replace("'", '"')) for idx in file_data][0]
   file.close()
-  return all_calendar_data
+  return all_calendar_post_data
 
-
-
-##################
-# Create a new calendar
-# Save it to our mock data file
-##################
 def create(event, text, date):
   # Get exising file content
   all_calendar_post_data = get_existing_data('calendar_post.json')
@@ -41,14 +35,8 @@ def create(event, text, date):
   file.close()
 
   # return uuid of new calendar
-  return new_calendar_post._uuid
+  return new_calendar_post._uuid  
 
-
-
-##################
-# Create a new calendar
-# Download the new version of mock data
-##################
 def create_and_download(event, text, date):
   # Get exising file content
   all_calendar_post_data = get_existing_data('calendar_post.json')
@@ -78,8 +66,7 @@ def create_and_download(event, text, date):
   tag.click()
   
   # return uuid of new calendar
-  return new_calendar_post._uuid
-  
+  return new_calendar_post._uuid  
 
 
 
@@ -88,7 +75,6 @@ def create_and_download(event, text, date):
 # If no uuid is provided, read all calendars from file
 ##################
 def read(uuid = None):
-  # Fetch calendar class data
   all_calendar_post_data = get_existing_data('calendar_post.json')
 
   # No uuid provided - return all results

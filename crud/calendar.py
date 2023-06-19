@@ -18,13 +18,13 @@ def get_existing_data(filename):
 # Create a new calendar
 # Save it to our mock data file
 ##################
-def create(calendar_post, event):
+def create(calendar_posts, event):
   # Get exising file content
   all_calendar_data = get_existing_data('calendar.json')
 
   # Create a new calendar
   new_calendar = calendar.Calendar(
-    calendar_post=calendar_post,
+    calendar_posts=calendar_posts,
     event=event
   )
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
@@ -47,25 +47,26 @@ def create(calendar_post, event):
 # Create a new calendar
 # Download the new version of mock data
 ##################
-def create_and_download(calendar_post, event):
+def create_and_download(calendar_posts, event):
   # Get exising file content
-  
   all_calendar_data = get_existing_data('calendar.json')
+  
   # Create a new calendar
   new_calendar = calendar.Calendar(
-    calendar_post = calendar_post,
+    calendar_posts = calendar_posts,
     event = event
   )
   
   new_calendar_json = dumps(new_calendar.__dict__, default=lambda o: o.__dict__)
   new_calendar_json = loads(new_calendar_json)
+  new_calendar_json['_calendar_posts'] = new_calendar_json['_calendar_posts'].replace("'", '"')
   
   # Add new calendar to existing content
   all_calendar_data.append(new_calendar_json)
-  
+
   # Write all content to file
   file = open('./mock/calendar.json', 'w')
-  file.write(str(all_calendar_data))
+  file.write(str(all_calendar_data).replace('"','\\"'))
   file.close()
 
   # Download mock data file
@@ -88,13 +89,13 @@ def create_and_download(calendar_post, event):
 def read(uuid = None):
   # Fetch calendar class data
   all_calendar_data = get_existing_data('calendar.json')
-
   # No uuid provided - return all results
   if uuid == None:
     calendar_list = []
     for calendar_data in all_calendar_data:
+      calendar_posts_as_list = calendar_data['_calendar_posts'].replace('[','').replace(']','').replace('"','').replace('\'','').split()
       calendar_as_class = calendar.Calendar(
-        calendar_post = calendar_data['_calendar_post'],
+        calendar_posts = calendar_posts_as_list,
         event = calendar_data['_event']
       )
       calendar_as_class._uuid = calendar_data['_uuid']
@@ -106,7 +107,7 @@ def read(uuid = None):
     for calendar_data in all_calendar_data:
       if calendar_data['_uuid'] == uuid:
         calendar_as_class = calendar.Calendar(
-          calendar_post = calendar_data['_calendar_post'],
+          calendar_posts = calendar_data['_calendar_posts'],
           event = calendar_data['_event']
         )
         calendar_as_class._uuid = calendar_data['_uuid']

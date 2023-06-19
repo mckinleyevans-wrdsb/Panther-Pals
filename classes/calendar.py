@@ -9,9 +9,7 @@ class Calender():
 
 
 class Calendar():
-  def __init__ (self, calendar_post, event):
+  def __init__ (self, calendar_posts, event):
     self._uuid = str(uuid4())
-    self._calendar_post = calendar_post
+    self._calendar_posts = calendar_posts
     self._event = event
-  
-

@@ -8,5 +8,5 @@ class Notification():
     self._title = title 
     self._description = description
     self._text = text
-    return self
+    
 
