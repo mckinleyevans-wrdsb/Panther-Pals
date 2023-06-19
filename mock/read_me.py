@@ -1,0 +1,1 @@
+# Mock data is fake data used to test out the backend of Panther Pals so we minimize errors when using actual data. We are using the JSON format as it is very flexible and easy to use. JSON is a way to organize and store information in a computer-friendly format. 

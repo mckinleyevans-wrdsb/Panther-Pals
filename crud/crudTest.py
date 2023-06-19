@@ -70,7 +70,7 @@ def test_create_and_download(test):
     print(f"--- Invalid result from {test['class_to_test'].lower()}.create_and_download({params_list}) ---", e)
 
 
-
+#Test code for each class 
 if DO_TESTS:
   all_tests = [{
     'class_to_test': 'Announcement',
